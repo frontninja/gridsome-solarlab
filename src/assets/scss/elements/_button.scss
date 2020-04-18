@@ -1,0 +1,24 @@
+.button {
+  display: inline-flex;
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  padding: 0 35px;
+  font-size: 18px;
+  font-weight: 800;
+  align-items: center;
+  color: var(--color-main);
+  background: var(--color-second);
+  transition: all .28s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    color: var(--color-main);
+    background: var(--color-second-accent);
+  }
+
+  &--accent {
+    color: var(--color-second);
+    background: var(--color-second-main);
+  }
+}

@@ -1,0 +1,15 @@
+@import "reset";
+@import "variables";
+@import "elements";
+
+body {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif, Arial;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1017px;
+  position: relative;
+  left: -126px;
+}
