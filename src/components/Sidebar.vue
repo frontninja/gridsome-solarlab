@@ -154,7 +154,7 @@
 
     .nav__link {
         display: inline-flex;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 18px;
         letter-spacing: 0.08em;
         text-transform: uppercase;

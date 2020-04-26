@@ -1,0 +1,12 @@
+.breadcrumbs {
+  color: #C4C4C4;
+  font-size: 14px;
+  font-weight: 600;
+  a {
+    color: #C4C4C4;
+    text-decoration: none;
+    &:hover {
+      color:var(--color-second-accent);
+    }
+  }
+}

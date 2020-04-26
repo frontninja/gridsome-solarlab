@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Sidebar/>
+    <Sidebar class="layout__sidebar"/>
     <div class="layout__content">
       <slot/>
     </div>
@@ -24,10 +24,11 @@ query {
 
 <style scoped lang="scss">
   .layout {
-    display: flex;
+    display: grid;
+    grid-template-columns: 126px 1fr;
   }
   .layout__content {
-    width: 100%;
-    padding-left: 126px;
+    grid-column-start: 2;
+    grid-column-end: -1;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <g-link :to="'/'+ activity.slug" class="activity-card" :class="{'activity-card--big': isBig, 'activity-card--active': !active}">
+    <g-link :to="activity.path" class="activity-card" :class="{'activity-card--big': isBig, 'activity-card--active': !active}">
         <div class="activity-card__bg" v-if="activity.acf.logo" :style="{backgroundImage: 'url(' + activity.acf.banner + ')'}"></div>
         <div class="activity-card__content">
             <h2 class="activity-card__title">{{activity.title}}</h2>

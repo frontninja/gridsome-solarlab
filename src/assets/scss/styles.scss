@@ -9,7 +9,13 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1017px;
+  width: 1017px;
   position: relative;
-  left: -126px;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

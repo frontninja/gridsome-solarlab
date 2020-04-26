@@ -20,6 +20,8 @@ module.exports = {
         }
     ],
     templates: {
-        WordPressActivity: '/:slug'
+        WordPressActivity: '/acitvities/:slug',
+        WordPressNews:'/news/:slug',
+        WordPressAlbom:'/albom/:slug'
     }
 };
