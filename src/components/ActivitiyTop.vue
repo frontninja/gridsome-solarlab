@@ -1,10 +1,5 @@
 <template>
   <div class="container">
-    <div class="breadcrumbs activity-page__breadcrumbs">
-      <g-link to="/">главная</g-link>/
-      <g-link to="/activities">мероприятия</g-link>
-      / {{title}}
-    </div>
     <div class="activity-main">
       <div class="activity-main__item">
         <h1 class="activity-main__title">{{title}}</h1>
@@ -90,7 +85,7 @@ export default {
 }
 
 .activity-timer__value {
-  background: var(--color-accent);
+  background: #33BE41;
   width: 50px;
   height: 50px;
   display: flex;
@@ -99,7 +94,7 @@ export default {
   margin-right: 10px;
   font-size: 30px;
   font-weight: 800;
-  color: var(--color-second);
+  color: var(--color-white);
 }
 
 .activity-timer__text {

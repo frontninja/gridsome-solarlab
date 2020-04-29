@@ -1,12 +1,14 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebar" v-click-outside="hide">
         <div class="sidebar__content">
             <button class="icon-button" @click="toggle()">
                 <MenuIcon/>
             </button>
-            <g-link to="/" class="logo-link"><Logo/></g-link>
+            <g-link to="/" class="logo-link">
+                <Logo/>
+            </g-link>
         </div>
-        <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}">
+        <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}" >
             <div class="sidebar__auth-links">
                 <a href="#" class="sidebar__auth-link">Вход</a>
                 <a href="#" class="sidebar__auth-link">Рег</a>
@@ -14,28 +16,28 @@
             <nav class="sidebar__nav nav">
                 <ul class="nav__ul">
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/activities"  class="nav__link">Мероприятия</g-link>
+                        <g-link to="/activities" class="nav__link">Мероприятия</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
                         <g-link to="/" class="nav__link">Новости</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/"  class="nav__link">Участники</g-link>
+                        <g-link to="/" class="nav__link">Участники</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
                         <g-link to="/" class="nav__link">Медиа</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/"  class="nav__link">О нас</g-link>
+                        <g-link to="/" class="nav__link">О нас</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/"  class="nav__link">Аналитика</g-link>
+                        <g-link to="/" class="nav__link">Аналитика</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/"  class="nav__link">Музей</g-link>
+                        <g-link to="/" class="nav__link">Музей</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/kitchen"  class="nav__link">Полезное</g-link>
+                        <g-link to="/kitchen" class="nav__link">Полезное</g-link>
                     </li>
                 </ul>
             </nav>
@@ -60,7 +62,10 @@
             },
 
             hide() {
-                this.isExpandedVisible = false
+                if (this.isExpandedVisible) {
+                    console.log(this.isExpandedVisible);
+                    this.isExpandedVisible = false
+                }
             }
         },
         components: {
@@ -84,7 +89,7 @@
         left: 0;
         min-height: 100vh;
         flex-shrink: 0;
-        background: var(--color-main);
+        background: var(--color-primary-dark);
     }
 
     .sidebar__content {
@@ -118,7 +123,7 @@
         font-size: 21px;
         letter-spacing: 0.11em;
         text-transform: uppercase;
-        color: var(--color-second);
+        color: var(--color-white);
         text-decoration: none;
         transition: color .28s ease-in-out;
 
@@ -127,7 +132,7 @@
         }
 
         &:hover {
-            color: var(--color-accent);
+            color: var(--color-primary-lighter);
         }
     }
 
@@ -141,7 +146,7 @@
 
         &:hover {
             svg {
-                fill: var(--color-accent);
+                fill: var(--color-primary-lighter);
             }
         }
     }
@@ -159,17 +164,17 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
         white-space: nowrap;
-        color: var(--color-second);
+        color: var(--color-white);
         text-decoration: none;
         transition: color .28s ease-in-out;
 
         &:hover {
-            color: var(--color-accent);
+            color: var(--color-primary-lighter);
         }
     }
 
     .nav__li {
-        &+& {
+        & + & {
             margin-top: 28px;
         }
     }

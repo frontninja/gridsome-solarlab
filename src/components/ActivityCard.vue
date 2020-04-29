@@ -23,8 +23,8 @@
     .activity-card {
         position: relative;
         transition: all .3s ease-in-out;
-        color: var(--color-main);
-        background: var(--color-second);
+        color: var(--color-black);
+        background: var(--color-white);
         cursor: pointer;
         flex: 1;
         text-decoration: none;
@@ -33,14 +33,14 @@
         }
 
         &--active {
-            color: var(--color-second);
-            background: var(--color-main);
+            color: var(--color-white);
+            background: var(--color-black);
             .activity-card__bg {
                 filter: grayscale(.2);
             }
             .activity-card__tag{
-                background: var(--color-second);
-                color: var(--color-main);
+                background: var(--color-white);
+                color: var(--color-black);
             }
         }
     }
@@ -100,7 +100,7 @@
         letter-spacing: 0.14em;
         text-transform: uppercase;
         transition: all .3s ease-in-out;
-        background: var(--color-main);
-        color: var(--color-second);
+        background: var(--color-black);
+        color: var(--color-white);
     }
 </style>

@@ -2,17 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/elements/_breadcrumbs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/scss/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svg/bg-element.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ActivityBanner.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Media.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/News.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Inter-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Inter-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_elements.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_elements.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/404/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/about/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/activities/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/activity/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/css/0.styles.d3452839.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/404/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/about/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/activities/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/activity/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/krimskaya-osen-2020/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/krimskaya-zima-2020/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/data/krimskoe-leto-2020/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/js/app.f0db201c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/js/page--node-modules-gridsome-app-pages-404-vue.5de63b59.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/js/page--src-pages-about-vue.c95de4d9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/js/page--src-pages-activities-vue.7b43511e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/js/page--src-pages-activity-vue.be7e09ab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/js/page--src-pages-index-vue.3cf686e4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/js/page--src-templates-word-press-activity-vue.a93dd537.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/krimskaya-osen-2020/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/krimskaya-zima-2020/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sport/krimskoe-leto-2020/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/elements/_breadcrumbs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/elements/_breadcrumbs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/elements/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/elements/_button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/variables/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/variables/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svg/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActivityCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressAlbom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressAlbom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressNews.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressNews.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +126,9 @@
       <workItem from="1587449419661" duration="18278000" />
       <workItem from="1587540661066" duration="11000" />
       <workItem from="1587542749040" duration="4010000" />
+      <workItem from="1587928357977" duration="6072000" />
+      <workItem from="1587972204513" duration="9066000" />
+      <workItem from="1588180861170" duration="2646000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -111,21 +160,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="298" y="203" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587453064187" />
+    <state x="813" y="231" key="RollbackChangesDialog" timestamp="1587985213654">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="813" y="231" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587985213654" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1585242644137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585242644137" />
-    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1587495660900">
+    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1588183338064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587495660900" />
+    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588183338064" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1587321080117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587321080117" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587496937378">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588183315445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587496937378" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588183315445" />
   </component>
 </project>

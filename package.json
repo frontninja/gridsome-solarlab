@@ -9,7 +9,8 @@
   "dependencies": {
     "@gridsome/source-wordpress": "^0.5.3",
     "gridsome": "^0.7.0",
-    "vue-filter-pluralize": "^1.0.4"
+    "vue-filter-pluralize": "^1.0.4",
+    "vue-silentbox": "^2.0.0"
   },
   "devDependencies": {
     "gridsome-plugin-svg": "0.0.13",
