@@ -1,13 +1,14 @@
 <template>
     <Layout>
         <div>
+            <MainActivity :activity="$page.wordPressPage.acf.mainActivity"/>
             <div class="activity-cards"  @mouseleave="activeActivityCard = null">
                 <ActivityCard
-                        v-for="(edge, index) in $page.allWordPressActivity.edges"
-                        :key="edge.node.id"
-                        :activity="edge.node"
-                        :active="activeActivityCard !== edge.node.id && activeActivityCard !== null"
-                        @mouseenter.native="activeActivityCard = edge.node.id"
+                        v-for="({activity}, index) in $page.wordPressPage.acf.activities"
+                        :key="activity.id"
+                        :activity="activity"
+                        :active="activeActivityCard !== activity.id && activeActivityCard !== null"
+                        @mouseenter.native="activeActivityCard = activity.id"
                         :is-big="index === 0"
                 />
             </div>
@@ -17,12 +18,14 @@
 
 <script>
     import ActivityCard from "../components/ActivityCard";
+    import MainActivity from "../components/MainActivity";
     export default {
         metaInfo: {
             title: 'Hello, world!'
         },
         components: {
-            ActivityCard
+            ActivityCard,
+            MainActivity
         },
         data: () => {
             return {
@@ -40,21 +43,41 @@
 </style>
 
 <page-query>
-    query {
-    allWordPressActivity{
-    edges{
-    node{
+    query Page {
+    wordPressPage(id: "83") {
+    title
+    title
+    acf {
+    mainActivity {
+    title
     title
     id
     slug
     path
-    acf{
+    acf {
     logo
     banner
     tag
     period {
     from
     to
+    }
+    }
+    }
+    activities {
+    activity {
+    title
+    id
+    slug
+    path
+    acf {
+    logo
+    banner
+    tag
+    period {
+    from
+    to
+    }
     }
     }
     }

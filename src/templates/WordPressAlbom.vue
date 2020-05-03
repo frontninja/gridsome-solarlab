@@ -14,7 +14,7 @@
             <ActivityTop :title="$page.wordPressAlbom.acf.activity.title"/>
             <ActivityBanner :activity="$page.wordPressAlbom.acf.activity"/>
             <div class="section">
-                <div class="container">
+                <div class="container" v-if="$page.wordPressAlbom.acf.media">
                     <h1 class="text-xl margin">{{$page.wordPressAlbom.title}} <br> {{$page.wordPressAlbom.acf.date}}
                     </h1>
                     <silent-box class="silentbox-gallery"
@@ -62,14 +62,12 @@
     import ActivityTop from "../components/ActivitiyTop";
     import ActivityBanner from "../components/ActivityBanner";
     import Media from "../components/Media";
-    import VueSilentbox from 'vue-silentbox'
 
     export default {
         components: {
             ActivityTop,
             ActivityBanner,
-            Media,
-            VueSilentbox
+            Media
         },
         filters: {
             gallery: (imagesSrc) => {

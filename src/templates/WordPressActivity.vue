@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <article class="page">
+        <article class="page" :style="cssVars">
             <div class="container">
                 <nav class="activity-nav">
                     <ul class="activity-nav__ul">
@@ -29,7 +29,7 @@
                     {{$page.wordPressActivity.title}}
                 </div>
             </div>
-            <ActivityTop :title="$page.wordPressActivity.title"/>
+            <ActivityTop v-if="$page.wordPressActivity" :activity="$page.wordPressActivity"/>
             <ActivityBanner :activity="$page.wordPressActivity"/>
 
             <div class="container">
@@ -51,10 +51,10 @@
                         </div>
                         <div class="timings__item" v-for="(stage, index) of stages" :key="stage">
                             <div class="timings__item-top">
-                                <div class="timings__stage">
+                                <a class="timings__stage" :href="'#etap-' + (index+1)">
                                     <span class="timings__stage-value">{{stage}}</span>
                                     <span class="timings__stage-text">Этап</span>
-                                </div>
+                                </a>
                             </div>
                             <div class="timings__item-bot">
                                 <div class="timings__item-desc" v-if="index + 1 < stages.length">
@@ -82,6 +82,7 @@
                         class="period"
                         v-for="(period, index) of this.$page.wordPressActivity.acf.periods"
                         :key="index"
+                        :id="'etap-' + (index+1)"
                 >
                     <div
                             class="period__main"
@@ -99,16 +100,23 @@
                             >Регистрация</a>
                         </div>
                     </div>
-                    <video class="period__video" controls>
-                        <source :src="period.video" type="video/mp4"/>
-                    </video>
+                    <div class="period__video-wrapper">
+                        <div class="video-wrapper">
+                            <div class="video-wrapper__item video-wrapper__item--primary"></div>
+                            <div class="video-wrapper__item video-wrapper__item--accent"></div>
+                            <div class="video-wrapper__item video-wrapper__item--second"></div>
+                        </div>
+                        <video class="period__video" controls>
+                            <source :src="period.video" type="video/mp4"/>
+                        </video>
+                    </div>
                     <g-image :src="image.sourceUrl" :alt="image.altText" class="period__image"
                              v-for="image of period.images" :key="image.sourceUrl"></g-image>
                 </article>
             </div>
         </article>
-        <News :news-items="$page.wordPressActivity.acf.news"/>
-        <section class="documents-section">
+        <News :style="cssVars" :news-items="$page.wordPressActivity.acf.news"/>
+        <section class="documents-section" :style="cssVars">
             <div class="container documents-section__container">
                 <h2 class="documents-section__title">Документы</h2>
                 <div class="documents">
@@ -150,7 +158,7 @@
                 </g-link>
             </div>
         </section>
-         <Media :albums="$page.wordPressActivity.acf.alboms"/>
+        <Media :style="cssVars" :albums="$page.wordPressActivity.acf.alboms"/>
         <div class="container">
             <div>
                 <div id="vk_comments"></div>
@@ -159,58 +167,61 @@
     </Layout>
 </template>
 <page-query>
-query Activity($path: String!) {
-  wordPressActivity(path: $path) {
+    query Activity($path: String!) {
+    wordPressActivity(path: $path) {
     slug
     id
     title
     acf {
-      logo
-      banner
-      tag
-      description
-      numberOfStages
-      totalDistance
-      numberOfDays
-      period {
-        from
-        to
-      }
-      periods {
-        title
-        textDate
-        content
-        registerLink
-        video
-        images {
-          sourceUrl
-          altText
-        }
-      }
-      news {
-        item {
-          path
-          slug
-          id
-          title
-          acf {
-            image
-          }
-        }
-      }
-      alboms {
-        albom {
-          path
-          title
-          acf {
-            media
-            date
-          }
-        }
-      }
+    primaryColor
+    accentColor
+    secondColor
+    logo
+    banner
+    tag
+    description
+    numberOfStages
+    totalDistance
+    numberOfDays
+    period {
+    from
+    to
     }
-  }
-}
+    periods {
+    title
+    textDate
+    content
+    registerLink
+    video
+    images {
+    sourceUrl
+    altText
+    }
+    }
+    news {
+    item {
+    path
+    slug
+    id
+    title
+    acf {
+    image
+    }
+    }
+    }
+    alboms {
+    albom {
+    path
+    title
+    acf {
+    media
+    date
+    }
+    }
+    }
+    }
+    }
+    }
 
 
 </page-query>
@@ -221,7 +232,6 @@ query Activity($path: String!) {
     import ActivityBanner from "../components/ActivityBanner";
     import Media from "../components/Media";
     import News from "../components/News";
-    import {initVK, injectVKOpenApi} from "../assets/js/vkinit.js";
 
     export default {
         components: {
@@ -238,6 +248,15 @@ query Activity($path: String!) {
             stages: null,
             periods: []
         }),
+        computed: {
+            cssVars() {
+                return {
+                    '--color-page-primary': this.$page.wordPressActivity.acf.primaryColor,
+                    '--color-page-accent': this.$page.wordPressActivity.acf.accentColor,
+                    '--color-page-second': this.$page.wordPressActivity.acf.secondColor,
+                }
+            }
+        },
         mounted() {
             if (this.$page) {
                 this.stages = Array(+this.$page.wordPressActivity.acf.numberOfStages)
@@ -254,6 +273,30 @@ query Activity($path: String!) {
 </script>
 
 <style scoped lang="scss">
+
+    .video-wrapper {
+        display: flex;
+    }
+
+    .video-wrapper__item {
+        height: 15px;
+    }
+
+    .video-wrapper__item--primary {
+        width: 45%;
+        background: var(--color-page-primary);
+    }
+
+    .video-wrapper__item--accent {
+        width: 35%;
+        background: var(--color-page-accent);
+    }
+
+    .video-wrapper__item--second {
+        width: 20%;
+        background: var(--color-page-second);
+    }
+
     .sponsors-section {
         padding-top: 85px;
         padding-bottom: 85px;
@@ -274,6 +317,12 @@ query Activity($path: String!) {
 
     .sponsors__item {
         justify-self: center;
+        filter: grayscale(1);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            filter: grayscale(0);
+        }
     }
 
     .documents-section {
@@ -344,7 +393,7 @@ query Activity($path: String!) {
     }
 
     .period__video {
-        height: 450px;
+        height: 435px;
         width: 100%;
     }
 
@@ -484,6 +533,7 @@ query Activity($path: String!) {
     .timings__stage {
         display: flex;
         align-items: baseline;
+        text-decoration: none;
     }
 
     .timings__stage-value {
@@ -496,6 +546,7 @@ query Activity($path: String!) {
         font-size: 18px;
         margin-left: 3px;
         text-transform: lowercase;
+        color: var(--color-black);
     }
 
     .timings__item--end {

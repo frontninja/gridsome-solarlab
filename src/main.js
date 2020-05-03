@@ -4,12 +4,13 @@
 import '~/assets/scss/styles.scss'
 import DefaultLayout from '~/layouts/Default.vue'
 import VueFilterPluralize from 'vue-filter-pluralize'
-
+import VueSilentbox from 'vue-silentbox'
 export default function (Vue, {router, head, isClient}) {
     // Set default layout as a global component
-    head.htmlAttrs = { lang: 'ru' }
+    head.htmlAttrs = { lang: 'ru' };
     Vue.component('Layout', DefaultLayout);
     Vue.use(VueFilterPluralize);
+    Vue.use(VueSilentbox);
     Vue.directive('click-outside',
         {
             bind: function (el, binding, vnode) {
