@@ -4,12 +4,14 @@
   --color-primary-light: hsl(209, 79%, 38%);
   --color-primary-dark: hsl(209, 79%, 18%);
   --color-primary-darken: hsl(209, 79%, 8%);
+  --color-accent: #EC681D;
+  --color-second: var(--color-primary);
   --color-black: #1E1E1E;
+  --color-gray-text: #616160;
+
   --color-white: #FFFFFF;
   --color-bg: #FFF;
   --color-gray: #787878;
+  --color-gray-light: #E5E5E5;
   --color-gray-lighten: #F2F2F2;
-  --color-page-primary: #9B191A;
-  --color-page-accent: #EC681D;
-  --color-page-second: #FABD13;
 }

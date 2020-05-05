@@ -3,7 +3,7 @@
         <div class="media-section__main">
             <h2 class="media-section__main-title">Медиа</h2>
         </div>
-        <g-link class="media-section__item" :to="albom.path" v-for="{albom} of albums" v-if="albom" :key="albom.title">
+        <g-link class="media-section__item" :to="albom.path" :class="{'media-section__item--accent': accent}" v-for="{albom, accent} of albums" v-if="albom" :key="albom.title">
             <span
                     class="media-section__item-bg"
                     :style="{backgroundImage: 'url(' + albom.acf.media[0] + ')'}"
@@ -32,7 +32,7 @@
     }
 
     .media-section__main {
-        background: var(--color-page-second);
+        background: var(--color-second);
         display: flex;
         justify-content: center;
         padding: 95px 15px;
@@ -68,6 +68,21 @@
 
             .media-section__item-content {
                 color: var(--color-white);
+            }
+        }
+
+        &--accent {
+            &:before {
+                z-index: 2;
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-top: 32px solid var(--color-accent);
+                border-right: 32px solid transparent;
             }
         }
 

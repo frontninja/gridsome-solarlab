@@ -33,7 +33,7 @@
         display: flex;
         text-align: center;
         justify-content: center;
-        background: var(--color-page-accent);
+        background: var(--color-accent);
     }
 
     .news__title {

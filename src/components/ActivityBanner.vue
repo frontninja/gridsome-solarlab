@@ -57,7 +57,7 @@
         height: 438px;
         padding-top: 100px;
         color: var(--color-white);
-        background: var(--color-page-primary);
+        background: var(--color-primary);
         background-size: cover;
         background-position: center;
         position: relative;
@@ -117,7 +117,7 @@
     .activity-banner__stage-value {
         font-size: 144px;
         font-weight: 800;
-        color: var(--color-page-accent);
+        color: var(--color-accent);
     }
 
     .activity-banner__stage-text {

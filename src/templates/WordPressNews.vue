@@ -11,7 +11,7 @@
                     </g-link>
                 </div>
             </div>
-            <ActivityTop :title="$page.wordPressNews.acf.acitivty.title"/>
+            <ActivityTop v-if="$page.wordPressNews.acf.acitivty" :activity="$page.wordPressNews.acf.acitivty"/>
             <ActivityBanner :activity="$page.wordPressNews.acf.acitivty"/>
             <div class="section">
                 <div class="container">
@@ -34,6 +34,10 @@
     path
     title
     acf {
+    period {
+    from
+    to
+    }
     logo
     banner
     tag

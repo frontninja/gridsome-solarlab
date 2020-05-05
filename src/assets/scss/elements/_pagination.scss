@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  padding: 20px;
+  &> *+* {
+    margin-left: 5px;
+  }
+  &>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #E5E5E5;
+    text-decoration: none;
+    color: var(--color-black);
+    min-width: 24px;
+    padding: 0 3px;
+    font-weight: 900;
+    height: 24px;
+    transition: all .3s ease-in-out;
+    &:hover,&.active--exact {
+      background: var(--color-primary);;
+      color: var(--color-white);
+    }
+  }
+}

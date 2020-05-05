@@ -8,23 +8,22 @@
   font-size: 18px;
   font-weight: 800;
   align-items: center;
-  color: var(--color-black);
+  color: var(--color-gray-text);
   background: var(--color-white);
   transition: all .28s ease-in-out;
   text-decoration: none;
   &:hover {
-    color: var(--color-black);
-    background: var(--color-page-accent);
+    color: var(--color-primary);
   }
 
   &--accent {
     color: var(--color-white);
-    background: var(--color-page-primary);
+    background: var(--color-primary);
   }
 
   &--second {
     &:hover {
-      background: var(--color-page-primary);
+      background: var(--color-primary);
     }
   }
 }

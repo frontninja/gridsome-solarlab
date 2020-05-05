@@ -115,7 +115,9 @@
                 </article>
             </div>
         </article>
-        <News :style="cssVars" :news-items="$page.wordPressActivity.acf.news"/>
+        <Grid/>
+        <News :style="cssVars" v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
+              :news-items="$page.wordPressActivity.acf.news"/>
         <section class="documents-section" :style="cssVars">
             <div class="container documents-section__container">
                 <h2 class="documents-section__title">Документы</h2>
@@ -158,7 +160,8 @@
                 </g-link>
             </div>
         </section>
-        <Media :style="cssVars" :albums="$page.wordPressActivity.acf.alboms"/>
+        <Media :style="cssVars" v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
+               :albums="$page.wordPressActivity.acf.alboms"/>
         <div class="container">
             <div>
                 <div id="vk_comments"></div>
@@ -232,6 +235,7 @@
     import ActivityBanner from "../components/ActivityBanner";
     import Media from "../components/Media";
     import News from "../components/News";
+    import Grid from "../components/Grid";
 
     export default {
         components: {
@@ -239,7 +243,8 @@
             ActivityTop,
             ActivityBanner,
             Media,
-            News
+            News,
+            Grid
         },
         metaInfo() {
             return {title: this.$page.wordPressActivity.title};
@@ -251,9 +256,9 @@
         computed: {
             cssVars() {
                 return {
-                    '--color-page-primary': this.$page.wordPressActivity.acf.primaryColor,
-                    '--color-page-accent': this.$page.wordPressActivity.acf.accentColor,
-                    '--color-page-second': this.$page.wordPressActivity.acf.secondColor,
+                    '--color-primary': this.$page.wordPressActivity.acf.primaryColor,
+                    '--color-accent': this.$page.wordPressActivity.acf.accentColor,
+                    '--color-second': this.$page.wordPressActivity.acf.secondColor,
                 }
             }
         },
@@ -284,17 +289,17 @@
 
     .video-wrapper__item--primary {
         width: 45%;
-        background: var(--color-page-primary);
+        background: var(--color-primary);
     }
 
     .video-wrapper__item--accent {
         width: 35%;
-        background: var(--color-page-accent);
+        background: var(--color-accent);
     }
 
     .video-wrapper__item--second {
         width: 20%;
-        background: var(--color-page-second);
+        background: var(--color-second);
     }
 
     .sponsors-section {
@@ -326,7 +331,7 @@
     }
 
     .documents-section {
-        background-color: var(--color-page-primary);
+        background-color: var(--color-primary);
         padding: 85px 0;
         color: var(--color-white);
         background-image: url("../assets/images/design-element.png");
@@ -351,10 +356,10 @@
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            color: var(--color-page-accent);
+            color: var(--color-accent);
 
             .documents__item-icon {
-                fill: var(--color-page-accent);
+                fill: var(--color-accent);
             }
         }
     }
@@ -380,10 +385,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--color-page-primary);
+        background-color: var(--color-primary);
 
         &--second {
-            background-color: var(--color-page-accent);
+            background-color: var(--color-accent);
 
             & + .period__video {
                 height: 450px;
@@ -538,7 +543,7 @@
 
     .timings__stage-value {
         font-size: 48px;
-        color: var(--color-page-accent);
+        color: var(--color-accent);
         font-weight: 800;
     }
 
