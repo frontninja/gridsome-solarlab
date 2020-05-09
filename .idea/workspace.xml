@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/arrow-top-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Albums.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/News.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gridsome.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gridsome.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainActivity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Activities.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/WordPressAlbom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressAlbom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +92,7 @@
       <workItem from="1588794385214" duration="763000" />
       <workItem from="1588833276712" duration="10000" />
       <workItem from="1588926615279" duration="1299000" />
-      <workItem from="1589029867448" duration="713000" />
+      <workItem from="1589029867448" duration="4565000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -112,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588702631887</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="save">
+      <created>1589030588883</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589030588884</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,14 +134,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="save" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587497359455">
+    <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589034585145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587497359455" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1588702630530">
+    <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589034585145" />
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1589030587757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588702630530" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589030587757" />
     <state x="298" y="203" key="FileChooserDialogImpl" timestamp="1587453064187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

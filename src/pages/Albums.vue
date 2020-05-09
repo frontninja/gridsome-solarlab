@@ -54,7 +54,7 @@
 
 <page-query>
     query ($page: Int) {
-    allWordPressActivity(perPage: 8, page: $page) @paginate {
+    allWordPressActivity(perPage: 1, page: $page) @paginate {
     pageInfo {
     totalPages
     currentPage
@@ -99,19 +99,19 @@
         grid-row-gap: 18px;
         margin-bottom: 72px;
     }
-        .page-filter {
-            font-size: 14px;
-            color: #616160;
-            display: flex;
-            b {
-                font-weight: 900;
-                margin-right: 5px;
-            }
-
-            &>*:not(b)+* {
-                margin-left: 12px;
-            }
+    .page-filter {
+        font-size: 14px;
+        color: #616160;
+        display: flex;
+        b {
+            font-weight: 900;
+            margin-right: 5px;
         }
+
+        &>*:not(b)+* {
+            margin-left: 12px;
+        }
+    }
     .page-padding{
         padding-top: 91px;
     }

@@ -118,46 +118,24 @@
         <Grid/>
         <News :style="cssVars" v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
               :news-items="$page.wordPressActivity.acf.news"/>
-        <section class="documents-section" :style="cssVars">
+        <section class="documents-section" :style="cssVars" v-if="$page.wordPressActivity.acf.documents && $page.wordPressActivity.acf.documents.length">
             <div class="container documents-section__container">
                 <h2 class="documents-section__title">Документы</h2>
-                <div class="documents">
-                    <g-link class="documents__item">
+                <div class="documents" >
+                    <a class="documents__item" target="_blank" :href="document.file" :download="document.fileName" v-for="document of $page.wordPressActivity.acf.documents">
                         <Document class="documents__item-icon"/>
-                        <p class="documents__item-text">Регламент гонки</p>
-                    </g-link>
-                    <g-link class="documents__item">
-                        <Document class="documents__item-icon"/>
-                        <p class="documents__item-text">Регламент гонки</p>
-                    </g-link>
-                    <g-link class="documents__item">
-                        <Document class="documents__item-icon"/>
-                        <p class="documents__item-text">Регламент гонки</p>
-                    </g-link>
-                    <g-link class="documents__item">
-                        <Document class="documents__item-icon"/>
-                        <p class="documents__item-text">Регламент гонки</p>
-                    </g-link>
-                    <g-link class="documents__item">
-                        <Document class="documents__item-icon"/>
-                        <p class="documents__item-text">Регламент гонки</p>
-                    </g-link>
+                        <p class="documents__item-text">{{document.fileName}}</p>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="container sponsors-section">
+        <section class="container sponsors-section" v-if="$page.wordPressActivity.acf.sponsors && $page.wordPressActivity.acf.sponsors.length">
             <h2 class="sponsors-section__title">Спонсоры</h2>
             <div class="sponsors">
-                <g-link class="sponsors__item">
-                    <g-image src="../assets/images/sponsor.png"></g-image>
-                </g-link>
-                <g-link class="sponsors__item">
-                    <g-image src="../assets/images/sponsor2.png"></g-image>
-                </g-link>
-                <g-link class="sponsors__item">
-                    <g-image src="../assets/images/sponsor3.png"></g-image>
-                </g-link>
+                <a class="sponsors__item" :href="sponsor.acf.link" v-for="{sponsor} of $page.wordPressActivity.acf.sponsors">
+                    <g-image :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
+                </a>
             </div>
         </section>
         <Media :style="cssVars" v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
@@ -176,6 +154,19 @@
     id
     title
     acf {
+    documents {
+    fileName
+    file
+    }
+    sponsors {
+    sponsor {
+    title
+    acf {
+    logo
+    link
+    }
+    }
+    }
     primaryColor
     accentColor
     secondColor

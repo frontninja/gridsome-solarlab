@@ -3,7 +3,7 @@
         <div class="activity-main">
             <div class="activity-main__item">
                 <h1 class="activity-main__title">{{activity.title}}</h1>
-                <p class="activity-main__date">18.02 - 25.03.20</p>
+                <p class="activity-main__date">{{activity.acf.period.from | formatDate}} - {{activity.acf.period.to | formatDate}}</p>
             </div>
             <div class="activity-main__item">
                 <p class="activity-main__desc">

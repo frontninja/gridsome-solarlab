@@ -30,10 +30,7 @@
     import Sidebar from "../components/Sidebar";
     import Footer from "../components/Footer";
     import ArrowTop from "../assets/svg/arrow-top-icon.svg";
-
-    if (process.isClient) {
-        const scroller = new SweetScroll();
-    }
+    const scroller = new SweetScroll();
     const THROTTLE_DELAY = 100;
     export default {
         components: {Sidebar, Footer, ArrowTop},

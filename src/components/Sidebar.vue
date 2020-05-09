@@ -9,35 +9,35 @@
             </g-link>
         </div>
         <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}" >
-            <div class="sidebar__auth-links">
-                <a href="#" class="sidebar__auth-link">Вход</a>
-                <a href="#" class="sidebar__auth-link">Рег</a>
-            </div>
+<!--            <div class="sidebar__auth-links">-->
+<!--                <a href="#" class="sidebar__auth-link">Вход</a>-->
+<!--                <a href="#" class="sidebar__auth-link">Рег</a>-->
+<!--            </div>-->
             <nav class="sidebar__nav nav">
                 <ul class="nav__ul">
                     <li class="nav__li" @click="hide()">
                         <g-link to="/activities" class="nav__link">Мероприятия</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/" class="nav__link">Новости</g-link>
+                        <g-link to="/news" class="nav__link">Новости</g-link>
+                    </li>
+<!--                    <li class="nav__li" @click="hide()">-->
+<!--                        <g-link to="/" class="nav__link">Участники</g-link>-->
+<!--                    </li>-->
+                    <li class="nav__li" @click="hide()">
+                        <g-link to="/albums" class="nav__link">Медиа</g-link>
                     </li>
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/" class="nav__link">Участники</g-link>
+                        <g-link to="/about" class="nav__link">О нас</g-link>
                     </li>
+<!--                    <li class="nav__li" @click="hide()">-->
+<!--                        <g-link to="/" class="nav__link">Аналитика</g-link>-->
+<!--                    </li>-->
+<!--                    <li class="nav__li" @click="hide()">-->
+<!--                        <g-link to="/" class="nav__link">Музей</g-link>-->
+<!--                    </li>-->
                     <li class="nav__li" @click="hide()">
-                        <g-link to="/" class="nav__link">Медиа</g-link>
-                    </li>
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/" class="nav__link">О нас</g-link>
-                    </li>
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/" class="nav__link">Аналитика</g-link>
-                    </li>
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/" class="nav__link">Музей</g-link>
-                    </li>
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/kitchen" class="nav__link">Полезное</g-link>
+                        <g-link to="/kitchen" class="nav__link">Кухня</g-link>
                     </li>
                 </ul>
             </nav>
@@ -104,10 +104,11 @@
         max-width: 0;
         overflow: hidden;
         padding: 78px 0;
-        transition: max-width .5s cubic-bezier(.8, 0, .33, 1);
+        transition: all .5s cubic-bezier(.8, 0, .33, 1);
     }
 
     .sidebar__expanded--visible {
+        padding-right: 15px;
         max-width: 257px;
     }
 

@@ -11,7 +11,7 @@
                         {{activity.title}}
                     </p>
                     <p class="box__desc">
-                        {{activity.acf.period.from}} - {{activity.acf.period.to}}
+                        {{activity.acf.period.from | formatDate}} - {{activity.acf.period.to | formatDate}}
                     </p>
                 </g-link>
                 <div class="search-box">

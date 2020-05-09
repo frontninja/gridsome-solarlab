@@ -8,8 +8,8 @@ module.exports = {
     plugins: [{
         use: '@gridsome/source-wordpress',
         options: {
-            // baseUrl: 'http://u1040545.isp.regruhosting.ru/',
-            baseUrl: 'http://localhost/solarlab.cc',
+            baseUrl: 'http://u1040545.isp.regruhosting.ru/',
+            // baseUrl: 'http://localhost/solarlab.cc',
             apiBase: 'wp-json',
             typeName: 'WordPress',
             perPage: 100,
