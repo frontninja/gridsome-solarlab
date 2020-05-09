@@ -54,7 +54,7 @@
 
 <page-query>
     query ($page: Int) {
-    allWordPressActivity(perPage: 8, page: $page) @paginate {
+    allWordPressActivity(perPage: 1, page: $page) @paginate {
     pageInfo {
     totalPages
     currentPage

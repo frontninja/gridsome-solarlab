@@ -66,7 +66,6 @@
     import ActivityTop from "../components/ActivitiyTop";
     import ActivityBanner from "../components/ActivityBanner";
     import Media from "../components/Media";
-
     export default {
         components: {
             ActivityTop,
