@@ -20,7 +20,7 @@
                       :key="tag"
               >{{tag}}</span>
                 </h2>
-                <p class="activity-banner__date">18.02 - 25.03.20</p>
+                <p class="activity-banner__date">{{activity.acf.period.from | formatDate}} - {{activity.acf.period.to | formatDate}}</p>
             </div>
             <div class="activity-banner__stages">
             <span

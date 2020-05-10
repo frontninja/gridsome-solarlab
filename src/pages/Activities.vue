@@ -88,7 +88,7 @@
         name: "Activities",
         metaInfo: {
             title: 'Activities'
-        }
+        },
     }
 </script>
 

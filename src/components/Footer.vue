@@ -135,4 +135,23 @@
             background: darken(#E3E7EB, 10%);
         }
     }
+
+    @media (max-width: 899px) {
+        .footer__container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .footer__block + .footer__block {
+            margin-top: 75px;
+            padding-left: 0;
+            border-left: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .footer__links {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 </style>

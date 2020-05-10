@@ -4,8 +4,8 @@
         <div class="activity-card__content">
             <h2 class="activity-card__title">{{activity.title}}</h2>
             <p class="activity-card__date" v-if="activity.acf.period">
-                <span v-if="activity.acf.period.from">{{activity.acf.period.from}}</span>
-                <span v-if="activity.acf.period.to"> - {{activity.acf.period.to}}</span></p>
+                <span v-if="activity.acf.period.from">{{activity.acf.period.from | formatDate}}</span>
+                <span v-if="activity.acf.period.to"> - {{activity.acf.period.to | formatDate}}</span></p>
             <div class="activity-card__tags" v-if="activity.acf.tag && activity.acf.tag.length">
                 <div class="activity-card__tag" v-for="tag in activity.acf.tag" :key="tag">{{tag}}</div>
             </div>

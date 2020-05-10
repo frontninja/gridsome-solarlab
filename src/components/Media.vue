@@ -3,7 +3,8 @@
         <div class="media-section__main">
             <h2 class="media-section__main-title">Медиа</h2>
         </div>
-        <g-link class="media-section__item" :to="albom.path" :class="{'media-section__item--accent': accent}" v-for="{albom, accent} of albums" v-if="albom" :key="albom.title">
+        <g-link class="media-section__item" :to="albom.path" :class="{'media-section__item--accent': accent}"
+                v-for="{albom, accent} of albums" v-if="albom" :key="albom.title">
             <span
                     class="media-section__item-bg"
                     :style="{backgroundImage: 'url(' + albom.acf.media[0] + ')'}"
@@ -90,33 +91,35 @@
             outline: none;
         }
 
-        &:first-of-type {
-            padding-top: 95px;
-            grid-column: 3/-1;
-            grid-row: 1/3;
-        }
+        @media (min-width: 768px) {
+            &:first-of-type {
+                padding-top: 95px;
+                grid-column: 3/-1;
+                grid-row: 1/3;
+            }
 
-        &:nth-of-type(2) {
-            grid-row: 3/5;
-        }
+            &:nth-of-type(2) {
+                grid-row: 3/5;
+            }
 
-        &:nth-of-type(3) {
-            grid-column: 2/4;
-            grid-row: 3/5;
-        }
+            &:nth-of-type(3) {
+                grid-column: 2/4;
+                grid-row: 3/5;
+            }
 
-        &:nth-of-type(5) {
-            grid-column: 5/7;
-        }
+            &:nth-of-type(5) {
+                grid-column: 5/7;
+            }
 
-        &:nth-of-type(6) {
-            grid-column: 4/7;
-            grid-row: 4/5;
-        }
+            &:nth-of-type(6) {
+                grid-column: 4/7;
+                grid-row: 4/5;
+            }
 
-        &:nth-of-type(6) {
-            grid-column: 4/7;
-            grid-row: 4/5;
+            &:nth-of-type(6) {
+                grid-column: 4/7;
+                grid-row: 4/5;
+            }
         }
     }
 
@@ -141,5 +144,18 @@
         text-decoration: none;
         color: var(--color-black);
         transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: 767px) {
+        .media-section {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: 220px;
+            color: var(--color-white);
+        }
+
+        .media-section__main {
+            grid-row: 1/2;
+        }
     }
 </style>

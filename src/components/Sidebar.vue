@@ -180,4 +180,22 @@
         }
     }
 
+    @media (max-width: 767px) {
+        .sidebar__content {
+            width: 56px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-link {
+            margin-top: 20px;
+        }
+
+        .logo-link svg {
+            width: 30px;
+        }
+    }
+
 </style>

@@ -127,4 +127,12 @@
         color: #C4C4C4;
         transition: all .3s ease-in-out;
     }
+
+    @media (max-width: 767px) {
+        .layout {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 56px 1fr;
+        }
+    }
 </style>
