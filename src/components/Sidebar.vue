@@ -1,46 +1,48 @@
 <template>
-    <div class="sidebar" v-click-outside="hide">
-        <div class="sidebar__content">
-            <button class="icon-button" @click="toggle()">
-                <MenuIcon/>
-            </button>
-            <g-link to="/" class="logo-link">
-                <Logo/>
-            </g-link>
-        </div>
-        <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}" >
-<!--            <div class="sidebar__auth-links">-->
-<!--                <a href="#" class="sidebar__auth-link">Вход</a>-->
-<!--                <a href="#" class="sidebar__auth-link">Рег</a>-->
-<!--            </div>-->
-            <nav class="sidebar__nav nav">
-                <ul class="nav__ul">
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/activities" class="nav__link">Мероприятия</g-link>
-                    </li>
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/news" class="nav__link">Новости</g-link>
-                    </li>
-<!--                    <li class="nav__li" @click="hide()">-->
-<!--                        <g-link to="/" class="nav__link">Участники</g-link>-->
-<!--                    </li>-->
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/albums" class="nav__link">Медиа</g-link>
-                    </li>
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/about" class="nav__link">О нас</g-link>
-                    </li>
-<!--                    <li class="nav__li" @click="hide()">-->
-<!--                        <g-link to="/" class="nav__link">Аналитика</g-link>-->
-<!--                    </li>-->
-<!--                    <li class="nav__li" @click="hide()">-->
-<!--                        <g-link to="/" class="nav__link">Музей</g-link>-->
-<!--                    </li>-->
-                    <li class="nav__li" @click="hide()">
-                        <g-link to="/kitchen" class="nav__link">Кухня</g-link>
-                    </li>
-                </ul>
-            </nav>
+    <div class="sidebar__wrapper">
+        <div class="sidebar" v-click-outside="hide">
+            <div class="sidebar__content">
+                <button class="icon-button" @click="toggle()">
+                    <MenuIcon/>
+                </button>
+                <g-link to="/" class="logo-link">
+                    <Logo/>
+                </g-link>
+            </div>
+            <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}" >
+                <!--            <div class="sidebar__auth-links">-->
+                <!--                <a href="#" class="sidebar__auth-link">Вход</a>-->
+                <!--                <a href="#" class="sidebar__auth-link">Рег</a>-->
+                <!--            </div>-->
+                <nav class="sidebar__nav nav">
+                    <ul class="nav__ul">
+                        <li class="nav__li" @click="hide()">
+                            <g-link to="/activities" class="nav__link">Мероприятия</g-link>
+                        </li>
+                        <li class="nav__li" @click="hide()">
+                            <g-link to="/news" class="nav__link">Новости</g-link>
+                        </li>
+                        <!--                    <li class="nav__li" @click="hide()">-->
+                        <!--                        <g-link to="/" class="nav__link">Участники</g-link>-->
+                        <!--                    </li>-->
+                        <li class="nav__li" @click="hide()">
+                            <g-link to="/albums" class="nav__link">Медиа</g-link>
+                        </li>
+                        <li class="nav__li" @click="hide()">
+                            <g-link to="/about" class="nav__link">О нас</g-link>
+                        </li>
+                        <!--                    <li class="nav__li" @click="hide()">-->
+                        <!--                        <g-link to="/" class="nav__link">Аналитика</g-link>-->
+                        <!--                    </li>-->
+                        <!--                    <li class="nav__li" @click="hide()">-->
+                        <!--                        <g-link to="/" class="nav__link">Музей</g-link>-->
+                        <!--                    </li>-->
+                        <li class="nav__li" @click="hide()">
+                            <g-link to="/kitchen" class="nav__link">Кухня</g-link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </template>
@@ -76,6 +78,11 @@
 </script>
 
 <style scoped lang="scss">
+    .sidebar__wrapper {
+        width: 100%;
+        height: 100vh;
+        background: var(--color-primary-dark);
+    }
 
     .logo-link {
         margin-top: 35px;

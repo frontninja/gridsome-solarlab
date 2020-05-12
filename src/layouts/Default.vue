@@ -3,7 +3,7 @@
         <Sidebar class="layout__sidebar"/>
         <div class="layout__wrapper">
             <div class="layout__content">
-                <slot/>
+                <slot class="page__content"/>
             </div>
             <Footer class="layout__footer"/>
         </div>
