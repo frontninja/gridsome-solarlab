@@ -24,109 +24,111 @@
                 <button class="grid-section__filter-item" v-for="item of tab.content">{{item.title}}</button>
             </div>
 
-            <div class="grid">
-                <div class="grid__head">
+            <div class="grid__wrapper">
+                <div class="grid">
+                    <div class="grid__head">
                     <span class="grid__item">
                         Место
                     </span>
-                    <span class="grid__item">
+                        <span class="grid__item">
                         Участник
                     </span>
-                    <span class="grid__item">
+                        <span class="grid__item">
                         Номер
                     </span>
-                    <span class="grid__item">
+                        <span class="grid__item">
                         Кругов
                     </span>
-                    <span class="grid__item">
+                        <span class="grid__item">
                         Время
                     </span>
-                </div>
-                <div class="grid__body">
-                    <div class="grid__row">
+                    </div>
+                    <div class="grid__body">
+                        <div class="grid__row">
                          <span class="grid__item grid__item--first">
                             1
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             Щебелин Алексей (ETALON TEAM)
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             103
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             10
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             00:05:47.54
                         </span>
-                    </div>
-                    <div class="grid__row">
+                        </div>
+                        <div class="grid__row">
                          <span class="grid__item grid__item--second">
                             2
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             Щебелин Алексей (ETALON TEAM)
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             103
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             10
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             00:05:47.54
                         </span>
-                    </div>
-                    <div class="grid__row">
+                        </div>
+                        <div class="grid__row">
                          <span class="grid__item grid__item--third">
                             3
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             Щебелин Алексей (ETALON TEAM)
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             103
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             10
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             00:05:47.54
                         </span>
-                    </div>
-                    <div class="grid__row">
+                        </div>
+                        <div class="grid__row">
                          <span class="grid__item">
                             4
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             Щебелин Алексей (ETALON TEAM)
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             103
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             10
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             00:05:47.54
                         </span>
-                    </div>
-                    <div class="grid__row">
+                        </div>
+                        <div class="grid__row">
                          <span class="grid__item">
                             5
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             Щебелин Алексей (ETALON TEAM)
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             103
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             10
                         </span>
-                        <span class="grid__item">
+                            <span class="grid__item">
                             00:05:47.54
                         </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -329,9 +331,11 @@
         font-weight: 900;
         font-size: 18px;
         color: #616160;
+
         &:hover, &--active {
             color: var(--color-accent);
         }
+
         & + & {
             margin-left: 20px;
         }
@@ -367,6 +371,7 @@
         grid-template-columns: 115px 1fr 115px 115px 115px;
         grid-column-gap: 15px;
         border-bottom: 1px solid #C4C4C4;
+
         .grid__item {
             font-weight: 900;
             font-size: 18px;
@@ -376,6 +381,7 @@
 
     .grid__item {
         font-size: 18px;
+
         &--first {
             font-weight: 900;
             color: #FABD13;
@@ -386,7 +392,7 @@
             color: #C4C4C4;
         }
 
-        &--third{
+        &--third {
             font-weight: 900;
             color: #EC681D;
         }
@@ -417,6 +423,56 @@
             svg {
                 fill: var(--color-accent);
             }
+        }
+    }
+
+    @media (max-width: 1023px) {
+
+        .grid__wrapper {
+            width: 100%;
+            overflow: auto;
+            margin: 0 0 20px;
+        }
+
+        .grid {
+            width: 100%;
+            overflow: auto;
+            margin: 0 0 20px;
+        }
+        .grid-section__topline {
+            flex-direction: column;
+        }
+        .grid-section__filter {
+            order: 2;
+        }
+        .gird-section__search {
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .grid-section__tabs {
+            flex-wrap: wrap;
+        }
+
+        .grid-section__tab {
+            min-width: 50%;
+            flex: 1;
+
+            & + & {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .grid-section__tab {
+            min-width: 100%;
+            flex: 1;
+        }
+
+        .grid-section__tabs-content {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 </style>

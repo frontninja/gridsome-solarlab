@@ -94,4 +94,18 @@
         color: var(--color-black);
         transition: all 0.3s ease-in-out;
     }
+
+    @media (max-width: 1199px) {
+        .news {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 400px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .news {
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: 300px;
+        }
+    }
 </style>

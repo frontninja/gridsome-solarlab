@@ -124,4 +124,17 @@
         font-weight: 800;
         text-transform: uppercase;
     }
+
+    @media (max-width: 767px) {
+        .activity-main {
+            flex-direction: column;
+            align-items: stretch;
+            &>*+*{
+                margin-top: 50px;
+            }
+        }
+        .activity-main__item {
+            padding: 0;
+        }
+    }
 </style>

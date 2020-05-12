@@ -3,19 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="save">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/elements/_box.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/elements/_box.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/svg/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svg/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ActivityBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityBanner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActivityCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainActivity.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Media.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Media.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Activities.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Grid.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/News.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +88,8 @@
       <workItem from="1588926615279" duration="1299000" />
       <workItem from="1589029867448" duration="8021000" />
       <workItem from="1589121674452" duration="5350000" />
+      <workItem from="1589263670733" duration="308000" />
+      <workItem from="1589263988148" duration="1506000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -148,10 +142,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589034585145" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1589122161214">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1589265439359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589122161214" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589265439359" />
     <state x="298" y="203" key="FileChooserDialogImpl" timestamp="1587453064187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,17 +166,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588236441315" />
-    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1589123508302">
+    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1589192823961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589123508302" />
+    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589192823961" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1587321080117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587321080117" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589124684062">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589264377970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589124684062" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589264377970" />
   </component>
 </project>

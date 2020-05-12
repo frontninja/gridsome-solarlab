@@ -125,4 +125,21 @@
         font-weight: 800;
         text-transform: uppercase;
     }
+
+    @media (max-width: 1199px) {
+
+        .activity-banner {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .activity-banner__item {
+            min-width: 100%;
+            order: 2;
+            padding-left: 15px;
+
+            &--row {
+                order: 1;
+                justify-content: flex-start;
+            }
+        }
+    }
 </style>

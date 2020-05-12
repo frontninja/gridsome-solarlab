@@ -475,7 +475,7 @@
 
     .timings {
         display: flex;
-        border-bottom: 1px solid var(--color-black);
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 20px;
@@ -490,7 +490,10 @@
 
     .timings__item {
         flex: 1;
+        min-width: 15%;
+        border-bottom: 1px solid var(--color-black);
         position: relative;
+        margin-bottom: 50px;
     }
 
     .timings__item-top {
@@ -567,10 +570,7 @@
         }
     }
 
-    @media (max-width: 1200px) {
-        .news {
-            grid-template-columns: repeat(2, 1fr);
-        }
+    @media (max-width: 1199px) {
 
         .activity-banner {
             grid-template-columns: repeat(1, 1fr);
@@ -588,6 +588,23 @@
 
         .documents {
             grid-template-columns: repeat(3, 126px);
+        }
+
+        .timings__item {
+            min-width: 25%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .timings__item {
+            min-width: 50%;
+        }
+
+        .period {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: 300px;
+            color: var(--color-white);
         }
     }
 </style>
