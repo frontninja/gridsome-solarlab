@@ -132,6 +132,7 @@
             grid-template-columns: repeat(1, 1fr);
         }
         .activity-banner__item {
+            flex-wrap: wrap;
             min-width: 100%;
             order: 2;
             padding-left: 15px;

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="save">
+    <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ActivityBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityBanner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Grid.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/News.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +85,7 @@
       <workItem from="1589029867448" duration="8021000" />
       <workItem from="1589121674452" duration="5350000" />
       <workItem from="1589263670733" duration="308000" />
-      <workItem from="1589263988148" duration="1506000" />
+      <workItem from="1589263988148" duration="1729000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -126,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589036969588</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="save">
+      <created>1589265509490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589265509490</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,10 +145,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589034585145" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1589265439359">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1589265508502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589265439359" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589265508502" />
     <state x="298" y="203" key="FileChooserDialogImpl" timestamp="1587453064187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -158,10 +161,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585242644137" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1589036981480">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1589265516616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589036981480" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589265516616" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588236441315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
