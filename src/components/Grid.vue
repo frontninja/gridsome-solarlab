@@ -1,5 +1,6 @@
 <template>
     <div class="grid-section">
+        {{info}}
         <div class="container grid-section__container">
             <p class="grid-section__title">
                 классификация
@@ -139,6 +140,7 @@
 <script>
 
     import Close from '../assets/svg/close-icon.svg';
+    const axios = require('axios')
 
     export default {
         name: "Grid.vue",
@@ -147,6 +149,7 @@
         },
         data() {
             return {
+                info: null,
                 activeTab: 0,
                 tabs: [
                     {
@@ -254,6 +257,12 @@
                         ]
                     }
                 ]
+            }
+        },
+        mounted () {
+            if (process.isClient) {
+                axios.get('http://api.chrono.zelbike.ru/v1/RaceStages/List?accessKey=RCwhtjBTpjVJ7tPGZKfPnQdtGzgo8pGQUisXxeXEvw')
+                    .then(response => (this.info = response));
             }
         }
     }

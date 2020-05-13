@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@gridsome/source-wordpress": "^0.5.3",
+    "axios": "^0.19.2",
     "gridsome": "^0.7.0",
     "moment": "^2.24.0",
     "sweet-scroll": "^4.0.0",
