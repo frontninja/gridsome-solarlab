@@ -9,7 +9,7 @@
                     <Logo/>
                 </g-link>
             </div>
-            <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}" >
+            <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}">
                 <!--            <div class="sidebar__auth-links">-->
                 <!--                <a href="#" class="sidebar__auth-link">Вход</a>-->
                 <!--                <a href="#" class="sidebar__auth-link">Рег</a>-->
@@ -197,16 +197,20 @@
             bottom: 0;
             right: 0;
             overflow: hidden;
+            visibility: hidden;
             padding: 78px 0;
             transition: all .5s cubic-bezier(.8, 0, .33, 1);
             background: var(--color-primary-dark);
-            transform: translateX(0);
+            opacity: 0;
+            transform: translateX(-100%);
         }
 
         .sidebar__expanded--visible {
             padding-right: 15px;
             max-width: inherit;
-            transform: translateX(-100%);
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
         }
 
         .sidebar__content {
