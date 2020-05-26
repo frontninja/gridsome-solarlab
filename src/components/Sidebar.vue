@@ -37,9 +37,6 @@
                         <!--                    <li class="nav__li" @click="hide()">-->
                         <!--                        <g-link to="/" class="nav__link">Музей</g-link>-->
                         <!--                    </li>-->
-                        <li class="nav__li" @click="hide()">
-                            <g-link to="/kitchen" class="nav__link">Кухня</g-link>
-                        </li>
                     </ul>
                 </nav>
             </div>

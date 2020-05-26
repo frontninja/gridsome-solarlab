@@ -15,23 +15,23 @@
                     </p>
                 </g-link>
                 <div class="search-box">
-                    <p class="search-box__title">Поиск<br>
-                        мероприятия</p>
-                    <div class="search-box__select-wrapper">
-                        <button type="button" class="search-box__select">поиск по</button>
-                        <div class="search-box__select-content">
-                            <span class="search-box__select-item">гонке</span>
-                            <span class="search-box__select-item">участнику</span>
-                            <span class="search-box__select-item">возраст</span>
-                            <span class="search-box__select-item">кол.во этапов</span>
-                            <span class="search-box__select-item">дате</span>
-                        </div>
-                    </div>
-                    <input type="text" class="search-box__input" placeholder="Поиск...">
-                    <div class="search-box__buttons">
-                        <g-link class="search-box__button" :to="'activities'">Поиск</g-link>
+<!--                    <p class="search-box__title">Поиск<br>-->
+<!--                        мероприятия</p>-->
+<!--                    <div class="search-box__select-wrapper">-->
+<!--                        <button type="button" class="search-box__select">поиск по</button>-->
+<!--                        <div class="search-box__select-content">-->
+<!--                            <span class="search-box__select-item">гонке</span>-->
+<!--                            <span class="search-box__select-item">участнику</span>-->
+<!--                            <span class="search-box__select-item">возраст</span>-->
+<!--                            <span class="search-box__select-item">кол.во этапов</span>-->
+<!--                            <span class="search-box__select-item">дате</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <input type="text" class="search-box__input" placeholder="Поиск...">-->
+<!--                    <div class="search-box__buttons">-->
+<!--                        <g-link class="search-box__button" :to="'activities'">Поиск</g-link>-->
                         <g-link class="search-box__button" :to="'activities'">все мороприятия</g-link>
-                    </div>
+<!--                    </div>-->
                 </div>
             </div>
             <div class="box-grid">
@@ -48,23 +48,23 @@
                     </p>
                 </g-link>
                 <div class="search-box">
-                    <p class="search-box__title">Поиск<br>
-                        новости</p>
-                    <div class="search-box__select-wrapper">
-                        <button type="button" class="search-box__select">поиск по</button>
-                        <div class="search-box__select-content">
-                            <span class="search-box__select-item">гонке</span>
-                            <span class="search-box__select-item">участнику</span>
-                            <span class="search-box__select-item">возраст</span>
-                            <span class="search-box__select-item">кол.во этапов</span>
-                            <span class="search-box__select-item">дате</span>
-                        </div>
-                    </div>
-                    <input type="text" class="search-box__input" placeholder="Поиск...">
-                    <div class="search-box__buttons">
-                        <g-link class="search-box__button" :to="'news'">Поиск</g-link>
+<!--                    <p class="search-box__title">Поиск<br>-->
+<!--                        новости</p>-->
+<!--                    <div class="search-box__select-wrapper">-->
+<!--                        <button type="button" class="search-box__select">поиск по</button>-->
+<!--                        <div class="search-box__select-content">-->
+<!--                            <span class="search-box__select-item">гонке</span>-->
+<!--                            <span class="search-box__select-item">участнику</span>-->
+<!--                            <span class="search-box__select-item">возраст</span>-->
+<!--                            <span class="search-box__select-item">кол.во этапов</span>-->
+<!--                            <span class="search-box__select-item">дате</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <input type="text" class="search-box__input" placeholder="Поиск...">-->
+<!--                    <div class="search-box__buttons">-->
+<!--                        <g-link class="search-box__button" :to="'news'">Поиск</g-link>-->
                         <g-link class="search-box__button" :to="'news'">все новости</g-link>
-                    </div>
+<!--                    </div>-->
                 </div>
             </div>
             <Grid/>

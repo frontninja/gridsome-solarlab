@@ -1,80 +1,47 @@
 <template>
     <Layout>
-        <div class="container page-padding">
-            <div class="grid-section__topline">
-                <div class="grid-section__filter">
-                    <span class="grid-section__filter-text">Фильтр</span>
-                    <span class="grid-section__filter-chip">Мужчины <button class="close-button"><Close/></button></span>
-                    <span class="grid-section__filter-chip">2 этап <button class="close-button"><Close/></button></span>
-                </div>
-                <input type="text" class="gird-section__search" placeholder="Поиск...">
-            </div>
-            <div class="page-filters">
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-            </div>
-        </div>
         <div class="box-grid">
             <div class="main-box">
-                <h1 class="main-box__title">Мероприятия</h1>
+                <h1 class="main-box__title">Медиа</h1>
             </div>
             <g-link :to="node.path" class="box"
-                    v-for="({node}, index) of $page.allWordPressActivity.edges" :key="index">
+                    v-for="({node}, index) of $page.allWordPressAlbom.edges" :key="index">
                 <div class="box__bg"
-                     :style="{backgroundImage: 'url(' + node.acf.banner + ')'}"></div>
+                     :style="{backgroundImage: 'url(' + node.acf.media[0] + ')'}"></div>
                 <p class="box__title">
                     {{node.title}}
                 </p>
                 <p class="box__desc">
-                    {{node.acf.period.from}} - {{node.acf.period.to}}
+                    {{node.acf.date}}
                 </p>
             </g-link>
         </div>
         <div class="container">
-            <Pager class="pagination" :info="$page.allWordPressActivity.pageInfo"/>
+            <Pager class="pagination" :info="$page.allWordPressAlbom.pageInfo"/>
         </div>
     </Layout>
 </template>
 
 <page-query>
-    query ($page: Int) {
-    allWordPressActivity(perPage: 1, page: $page) @paginate {
+    query($page: Int) {
+    allWordPressAlbom(perPage: 8, page: $page) @paginate {
     pageInfo {
     totalPages
     currentPage
     }
     edges {
     node {
-    id
-    title
     path
+    title
     acf {
-    banner
-    period {
-    from
-    to
+    date
+    media
     }
     }
     }
     }
     }
-    }
+
 </page-query>
 <script>
     import {Pager} from 'gridsome';

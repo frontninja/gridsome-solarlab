@@ -1,35 +1,35 @@
 <template>
     <Layout>
-        <div class="container page-padding">
-            <div class="grid-section__topline">
-                <div class="grid-section__filter">
-                    <span class="grid-section__filter-text">Фильтр</span>
-                    <span class="grid-section__filter-chip">Мужчины <button class="close-button"><Close/></button></span>
-                    <span class="grid-section__filter-chip">2 этап <button class="close-button"><Close/></button></span>
-                </div>
-                <input type="text" class="gird-section__search" placeholder="Поиск...">
-            </div>
-            <div class="page-filters">
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-                <div class="page-filter">
-                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>
-                </div>
-            </div>
-        </div>
+<!--        <div class="container page-padding">-->
+<!--            <div class="grid-section__topline">-->
+<!--                <div class="grid-section__filter">-->
+<!--                    <span class="grid-section__filter-text">Фильтр</span>-->
+<!--                    <span class="grid-section__filter-chip">Мужчины <button class="close-button"><Close/></button></span>-->
+<!--                    <span class="grid-section__filter-chip">2 этап <button class="close-button"><Close/></button></span>-->
+<!--                </div>-->
+<!--                <input type="text" class="gird-section__search" placeholder="Поиск...">-->
+<!--            </div>-->
+<!--            <div class="page-filters">-->
+<!--                <div class="page-filter">-->
+<!--                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>-->
+<!--                </div>-->
+<!--                <div class="page-filter">-->
+<!--                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>-->
+<!--                </div>-->
+<!--                <div class="page-filter">-->
+<!--                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>-->
+<!--                </div>-->
+<!--                <div class="page-filter">-->
+<!--                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>-->
+<!--                </div>-->
+<!--                <div class="page-filter">-->
+<!--                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>-->
+<!--                </div>-->
+<!--                <div class="page-filter">-->
+<!--                    <b>вид:</b> <span>шоссе</span> <span>кантри</span> <span>бег</span> <span>mtb</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="box-grid">
             <div class="main-box">
                 <h1 class="main-box__title">Мероприятия</h1>

@@ -92,7 +92,7 @@
                             <p class="period__title">{{index + 1}} Этап</p>
                             <h2 class="period__title">{{period.title}}</h2>
                             <p class="period__date">{{period.textDate}}</p>
-                            <p class="period__text">{{period.content}}</p>
+                            <p class="period__text text-component" v-html="period.content"></p>
                             <a
                                     :href="period.registerLink"
                                     :class="{'button--second': index % 2 === 0}"
@@ -118,11 +118,13 @@
         <Grid/>
         <News :style="cssVars" v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
               :news-items="$page.wordPressActivity.acf.news"/>
-        <section class="documents-section" :style="cssVars" v-if="$page.wordPressActivity.acf.documents && $page.wordPressActivity.acf.documents.length">
+        <section class="documents-section" :style="cssVars"
+                 v-if="$page.wordPressActivity.acf.documents && $page.wordPressActivity.acf.documents.length">
             <div class="container documents-section__container">
                 <h2 class="documents-section__title">Документы</h2>
-                <div class="documents" >
-                    <a class="documents__item" target="_blank" :href="document.file" :download="document.fileName" v-for="document of $page.wordPressActivity.acf.documents">
+                <div class="documents">
+                    <a class="documents__item" target="_blank" :href="document.file" :download="document.fileName"
+                       v-for="document of $page.wordPressActivity.acf.documents">
                         <Document class="documents__item-icon"/>
                         <p class="documents__item-text">{{document.fileName}}</p>
                     </a>
@@ -130,10 +132,12 @@
             </div>
         </section>
 
-        <section class="container sponsors-section" v-if="$page.wordPressActivity.acf.sponsors && $page.wordPressActivity.acf.sponsors.length">
+        <section class="container sponsors-section"
+                 v-if="$page.wordPressActivity.acf.sponsors && $page.wordPressActivity.acf.sponsors.length">
             <h2 class="sponsors-section__title">Спонсоры</h2>
             <div class="sponsors">
-                <a class="sponsors__item" :href="sponsor.acf.link" v-for="{sponsor} of $page.wordPressActivity.acf.sponsors">
+                <a class="sponsors__item" :href="sponsor.acf.link"
+                   v-for="{sponsor} of $page.wordPressActivity.acf.sponsors">
                     <g-image :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
                 </a>
             </div>
@@ -306,6 +310,7 @@
 
     .sponsors {
         display: grid;
+        grid-column-gap: 20px;
         grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: 150px;
         align-items: center;

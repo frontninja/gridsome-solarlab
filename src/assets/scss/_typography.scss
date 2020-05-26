@@ -2,7 +2,7 @@
   // line-height
   --heading-line-height: 1.2;
   --body-line-height: 1.4;
-  --space-unit:  1em;
+  --space-unit: 1em;
 }
 
 $breakpoints: (
@@ -10,14 +10,18 @@ $breakpoints: (
         sm: 48rem, // ~768px
         md: 64rem, // ~1024px
         lg: 80rem, // ~1280px
-        xl: 90rem  // ~1440px
+        xl: 90rem // ~1440px
 ) !default;
 
 @mixin breakpoint($breakpoint, $logic: false) {
-  @if( $logic ) {
-    @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+  @if ($logic) {
+    @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+      @content;
+    }
   } @else {
-    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+      @content;
+    }
   }
 }
 
@@ -104,6 +108,10 @@ $breakpoints: (
 
   > *:last-child {
     margin-bottom: 0;
+  }
+
+  a {
+    color: var(--color-second);
   }
 }
 
