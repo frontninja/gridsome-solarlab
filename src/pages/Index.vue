@@ -81,7 +81,7 @@
 
     export default {
         metaInfo: {
-            title: 'Hello, world!'
+            title: 'SolarLab Sport'
         },
         components: {
             ActivityCard,

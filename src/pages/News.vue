@@ -28,7 +28,6 @@
     }
     edges {
     node {
-    id
     title
     path
     acf {

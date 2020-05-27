@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <article class="page">
-            <div class="container">
+            <div class="container" v-if="!!$page.wordPressNews.acf.acitivty">
                 <div class="breadcrumbs activity-page__breadcrumbs">
                     <g-link to="/">главная</g-link>
                     /
@@ -11,15 +11,16 @@
                     </g-link>
                 </div>
             </div>
-            <ActivityTop v-if="$page.wordPressNews.acf.acitivty" :activity="$page.wordPressNews.acf.acitivty"/>
-            <ActivityBanner :activity="$page.wordPressNews.acf.acitivty"/>
+            <ActivityTop v-if="!!$page.wordPressNews.acf.acitivty" :activity="$page.wordPressNews.acf.acitivty"/>
+            <ActivityBanner v-if="!!$page.wordPressNews.acf.acitivty" :activity="$page.wordPressNews.acf.acitivty"/>
             <div class="section">
                 <div class="container">
                     <h1 class="text-xl margin">{{$page.wordPressNews.title}}</h1>
                     <div v-html="$page.wordPressNews.content" class="text-component"></div>
                 </div>
             </div>
-            <News :news-items="$page.wordPressNews.acf.acitivty.acf.news"/>
+            <News v-if="!!$page.wordPressNews.acf.acitivty && $page.wordPressNews.acf.acitivty.acf.news && $page.wordPressNews.acf.acitivty.acf.news.length"
+                  :news-items="$page.wordPressNews.acf.acitivty.acf.news"/>
         </article>
     </Layout>
 </template>
@@ -64,6 +65,7 @@
     import ActivityTop from "../components/ActivitiyTop";
     import ActivityBanner from "../components/ActivityBanner";
     import News from "../components/News";
+
     export default {
         components: {
             ActivityTop,
