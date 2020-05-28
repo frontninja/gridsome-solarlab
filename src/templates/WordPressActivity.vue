@@ -1,5 +1,6 @@
 <template>
     <Layout>
+        <div class="overlay" v-if="activeSponsor" @click="activeSponsor = null"></div>
         <article class="page" :style="cssVars">
             <div class="container">
                 <nav class="activity-nav">
@@ -143,11 +144,13 @@
             </div>
         </section>
         <div class="sponsor-modal"
+             :class="activeSponsor === sponsor.acf.logo ? 'sponsor-modal--active' : ''"
              v-if="activeSponsor === sponsor.acf.logo"
              v-for="{sponsor} of $page.wordPressActivity.acf.sponsors">
-            <span>{{sponsor.title}}</span>
-            <g-image :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
-            <a :href="sponsor.acf.link">Сайт</a>
+            <span class="sponsor-modal__title"><ArrowLeftIcon class="sponsor-modal__title-icon"
+                                                              @click="activeSponsor = null"/> {{sponsor.title}}</span>
+            <g-image class="sponsor-modal__logo" :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
+            <a class="sponsor-modal__link" :href="sponsor.acf.link">Сайт</a>
         </div>
         <Media :style="cssVars" v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
                :albums="$page.wordPressActivity.acf.alboms"/>
@@ -238,6 +241,7 @@
     import Media from "../components/Media";
     import News from "../components/News";
     import Grid from "../components/Grid";
+    import ArrowLeftIcon from '../assets/svg/arrow-left-icon.svg';
 
     export default {
         components: {
@@ -246,14 +250,15 @@
             ActivityBanner,
             Media,
             News,
-            Grid
+            Grid,
+            ArrowLeftIcon
         },
         metaInfo() {
             return {title: this.$page.wordPressActivity.title};
         },
         data: () => ({
             stages: null,
-            activeSponsor: 'null',
+            activeSponsor: null,
             periods: []
         }),
         computed: {
@@ -282,11 +287,22 @@
 
 <style scoped lang="scss">
 
+    .overlay {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(black, .4);
+    }
+
     .sponsor-modal {
         opacity: 0;
         visibility: hidden;
-        background: #f2f2f2;
+        background: #ffffff;
         position: fixed;
+        min-width: 320px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -299,6 +315,52 @@
         &--active {
             opacity: 1;
             visibility: visible;
+        }
+    }
+
+    .sponsor-modal__title {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 31px;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+        color: #000000;
+        display: flex;
+        align-items: center;
+    }
+
+    .sponsor-modal__title-icon {
+        margin-right: 20px;
+        transition: all .28s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            fill: var(--color-primary);
+        }
+    }
+
+    .sponsor-modal__logo {
+        margin-bottom: 50px;
+    }
+
+    .sponsor-modal__link {
+        background: var(--color-primary);
+        border-radius: 160px;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        padding: 0 28px;
+
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 23px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #FFFFFF;
+        transition: all .28s ease-in-out;
+
+        &:hover {
+            background: var(--color-primary-dark);
         }
     }
 
@@ -348,6 +410,7 @@
         justify-self: center;
         filter: grayscale(1);
         transition: all .3s ease-in-out;
+        cursor: pointer;
 
         &:hover {
             filter: grayscale(0);
