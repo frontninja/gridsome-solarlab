@@ -4,11 +4,11 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 module.exports = {
-    siteName: 'Gridsome',
+    siteName: 'SolarLab Sport',
     plugins: [{
         use: '@gridsome/source-wordpress',
         options: {
-            baseUrl: 'http://u1040545.isp.regruhosting.ru/',
+            baseUrl: 'https://admin.solarlab.cc/',
             // baseUrl: 'http://localhost/solarlab.cc',
             apiBase: 'wp-json',
             typeName: 'WordPress',

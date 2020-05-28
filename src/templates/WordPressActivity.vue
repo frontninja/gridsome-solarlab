@@ -136,12 +136,19 @@
                  v-if="$page.wordPressActivity.acf.sponsors && $page.wordPressActivity.acf.sponsors.length">
             <h2 class="sponsors-section__title">Спонсоры</h2>
             <div class="sponsors">
-                <a class="sponsors__item" :href="sponsor.acf.link"
-                   v-for="{sponsor} of $page.wordPressActivity.acf.sponsors">
+                <div class="sponsors__item" @click="activeSponsor = sponsor.acf.logo"
+                     v-for="{sponsor} of $page.wordPressActivity.acf.sponsors">
                     <g-image :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
-                </a>
+                </div>
             </div>
         </section>
+        <div class="sponsor-modal"
+             v-if="activeSponsor === sponsor.acf.logo"
+             v-for="{sponsor} of $page.wordPressActivity.acf.sponsors">
+            <span>{{sponsor.title}}</span>
+            <g-image :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
+            <a :href="sponsor.acf.link">Сайт</a>
+        </div>
         <Media :style="cssVars" v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
                :albums="$page.wordPressActivity.acf.alboms"/>
         <div class="container">
@@ -246,6 +253,7 @@
         },
         data: () => ({
             stages: null,
+            activeSponsor: 'null',
             periods: []
         }),
         computed: {
@@ -273,6 +281,26 @@
 </script>
 
 <style scoped lang="scss">
+
+    .sponsor-modal {
+        opacity: 0;
+        visibility: hidden;
+        background: #f2f2f2;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 
     .video-wrapper {
         display: flex;
@@ -445,7 +473,7 @@
     }
 
     .activity-nav {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .activity-page__breadcrumbs {
@@ -454,12 +482,13 @@
 
     .activity-nav__ul {
         display: flex;
+        flex-wrap: wrap;
+        margin: 0 -25px;
     }
 
     .activity-nav__li {
-        & + & {
-            margin-left: 50px;
-        }
+        margin: 0 25px;
+        margin-bottom: 20px;
     }
 
     .activity-nav__link {
@@ -598,6 +627,10 @@
         .timings__item {
             min-width: 25%;
         }
+
+        .sponsors {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     @media (max-width: 767px) {
@@ -608,8 +641,20 @@
         .period {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            grid-auto-rows: 300px;
+            grid-auto-rows: min-content;
             color: var(--color-white);
+        }
+
+        .period > * {
+            min-height: 300px;
+        }
+
+        .period__main {
+            padding: 25px;
+        }
+
+        .sponsors {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 </style>

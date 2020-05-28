@@ -80,9 +80,6 @@
     import Grid from "../components/Grid";
 
     export default {
-        metaInfo: {
-            title: 'SolarLab Sport'
-        },
         components: {
             ActivityCard,
             MainActivity,
