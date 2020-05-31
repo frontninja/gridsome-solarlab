@@ -11,10 +11,10 @@
             </div>
             <div class="footer__block">
                 <h3 class="text-xl footer__title">Контакты</h3>
-                <g-link class="footer__link" to="/">Связаться с нами</g-link>
+                <g-link class="footer__link" to="/contacts">Связаться с нами</g-link>
                 <br>
-                <g-link class="footer__link" to="/">Карта мероприятий</g-link>
-                <g-link class="footer__button" to="/">связаться</g-link>
+                <g-link class="footer__link" to="/activities">Карта мероприятий</g-link>
+                <g-link class="footer__button" to="/contacts">связаться</g-link>
             </div>
         </div>
     </footer>
@@ -27,44 +27,28 @@
             return {
                 links: [
                     {
-                        path: '#',
-                        title: 'Партнёры'
-                    },
-                    {
-                        path: '#',
-                        title: 'карта'
-                    },
-                    {
-                        path: '#',
-                        title: 'квалификация'
-                    },
-                    {
-                        path: '#',
-                        title: 'контакты'
-                    },
-                    {
-                        path: '#',
-                        title: 'участники'
-                    },
-                    {
-                        path: '#',
-                        title: 'галлерея'
-                    },
-                    {
-                        path: '#',
-                        title: 'медиа'
-                    },
-                    {
-                        path: '#',
-                        title: 'этапы'
-                    },
-                    {
-                        path: '#',
-                        title: 'музей'
-                    },
-                    {
-                        path: '#',
+                        path: '/',
                         title: 'главная'
+                    },
+                    {
+                        path: 'activities',
+                        title: 'Мероприятия'
+                    },
+                    {
+                        path: 'news',
+                        title: 'Новости'
+                    },
+                    {
+                        path: 'albums',
+                        title: 'Медиа'
+                    },
+                    {
+                        path: 'about',
+                        title: 'О нас'
+                    },
+                    {
+                        path: 'contacts',
+                        title: 'Контакты'
                     },
                 ]
             }

@@ -47,9 +47,9 @@
             Pager,
             Close
         },
-        name: "Activities",
+        name: "News",
         metaInfo: {
-            title: 'Activities'
+            title: 'Новости'
         }
     }
 </script>

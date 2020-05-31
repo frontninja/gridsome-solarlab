@@ -31,6 +31,9 @@
                         <li class="nav__li" @click="hide()">
                             <g-link to="/about" class="nav__link">О нас</g-link>
                         </li>
+                        <li class="nav__li" @click="hide()">
+                            <g-link to="/contacts" class="nav__link">Контакты</g-link>
+                        </li>
                         <!--                    <li class="nav__li" @click="hide()">-->
                         <!--                        <g-link to="/" class="nav__link">Аналитика</g-link>-->
                         <!--                    </li>-->

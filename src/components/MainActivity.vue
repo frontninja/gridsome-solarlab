@@ -14,7 +14,9 @@
                     {{activity.acf.period.from | formatDate}} - {{activity.acf.period.to | formatDate}}
                 </p>
                 <div class="main-activity__buttons">
-                    <g-link class="button button--primary" :to="activity.path">регистрация</g-link>
+                    <g-link class="button button--primary" v-if="activity.acf.canRegister && activity.acf.registerLink"
+                            :to="activity.acf.registerLink">регистрация
+                    </g-link>
                     <g-link class="button button--primary" :to="activity.path">Подробности</g-link>
                 </div>
             </div>

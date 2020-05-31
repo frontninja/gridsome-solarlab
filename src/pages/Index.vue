@@ -111,6 +111,8 @@
     slug
     path
     acf {
+    canRegister
+    registerLink
     description
     logo
     banner

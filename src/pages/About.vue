@@ -1,14 +1,25 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <div class="text-component container container--padding">
+      <h1 class="text-xxl">{{$page.wordPressPage.title}}</h1>
+      <p v-html="$page.wordPressPage.content"></p>
+    </div>
   </Layout>
 </template>
 
+<page-query>
+  query Page {
+  wordPressPage(id: "178") {
+  title
+  content
+  }
+  }
+</page-query>
+
 <script>
 export default {
-  metaInfo: {
-    title: 'About us'
-  }
+  metaInfo() {
+    return {title: this.$page.wordPressPage.title};
+  },
 }
 </script>

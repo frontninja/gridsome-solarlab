@@ -87,7 +87,7 @@
         },
         name: "Activities",
         metaInfo: {
-            title: 'Activities'
+            title: 'Мероприятия'
         },
     }
 </script>

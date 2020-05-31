@@ -52,9 +52,9 @@
             Pager,
             Close
         },
-        name: "Activities",
+        name: "Media",
         metaInfo: {
-            title: 'Activities'
+            title: 'Медиа'
         }
     }
 </script>

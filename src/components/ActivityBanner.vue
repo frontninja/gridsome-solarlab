@@ -6,7 +6,8 @@
                     :src="activity.acf.logo"
                     :alt="activity.title"
             ></g-image>
-            <a href="#" class="button activity-banner__button">Регистрация</a>
+            <a v-if="activity.acf.canRegister && activity.acf.registerLink" :href="activity.acf.registerLink"
+               class="button activity-banner__button">Регистрация</a>
         </div>
         <div
                 class="activity-banner__item activity-banner__item--row activity-banner__item--overlay"
@@ -20,7 +21,8 @@
                       :key="tag"
               >{{tag}}</span>
                 </h2>
-                <p class="activity-banner__date">{{activity.acf.period.from | formatDate}} - {{activity.acf.period.to | formatDate}}</p>
+                <p class="activity-banner__date">{{activity.acf.period.from | formatDate}} - {{activity.acf.period.to |
+                    formatDate}}</p>
             </div>
             <div class="activity-banner__stages">
             <span

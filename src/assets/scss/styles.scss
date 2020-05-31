@@ -21,10 +21,20 @@ body {
   background: #fff;
 }
 
+.layout__content--lightgray {
+  .layout__content {
+    background: var(--color-gray-lighten);
+  }
+}
+
 .container {
   margin: 0 auto;
   width: 1017px;
   position: relative;
+}
+
+.container--padding {
+  padding: 100px 0;
 }
 @media (max-width: 1200px) {
   .container {

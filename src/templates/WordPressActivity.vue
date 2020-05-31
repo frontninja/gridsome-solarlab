@@ -1,3 +1,4 @@
+import SweetScroll from "sweet-scroll";
 <template>
     <Layout>
         <div class="overlay" v-if="activeSponsor" @click="activeSponsor = null"></div>
@@ -5,20 +6,27 @@
             <div class="container">
                 <nav class="activity-nav">
                     <ul class="activity-nav__ul">
-                        <li class="activity-nav__li">
-                            <a href="#" class="activity-nav__link">Результаты</a>
+                        <li class="activity-nav__li"
+                            v-if="$page.wordPressActivity.acf.resultsLink"
+                        >
+                            <button type="button" @click="scrollTo('results')" class="activity-nav__link">Результаты
+                            </button>
                         </li>
-                        <li class="activity-nav__li">
-                            <a href="#" class="activity-nav__link">Спонсоры</a>
+                        <li class="activity-nav__li"
+                            v-if="$page.wordPressActivity.acf.sponsors && $page.wordPressActivity.acf.sponsors.length">
+                            <button type="button" @click="scrollTo('sponsors')" class="activity-nav__link">Спонсоры</button>
                         </li>
-                        <li class="activity-nav__li">
-                            <a href="#" class="activity-nav__link">Новости</a>
+                        <li class="activity-nav__li"
+                            v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length">
+                            <button type="button" @click="scrollTo('news')" class="activity-nav__link">Новости</button>
                         </li>
-                        <li class="activity-nav__li">
-                            <a href="#" class="activity-nav__link">Регламент</a>
+                        <li class="activity-nav__li"
+                            v-if="$page.wordPressActivity.acf.documents && $page.wordPressActivity.acf.documents.length">
+                            <button type="button" @click="scrollTo('documents')" class="activity-nav__link">Документы</button>
                         </li>
-                        <li class="activity-nav__li">
-                            <a href="#" class="activity-nav__link">Список участников</a>
+                        <li class="activity-nav__li"
+                            v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length">
+                            <button type="button" @click="scrollTo('media')" class="activity-nav__link">Медиа</button>
                         </li>
                     </ul>
                 </nav>
@@ -52,10 +60,10 @@
                         </div>
                         <div class="timings__item" v-for="(stage, index) of stages" :key="stage">
                             <div class="timings__item-top">
-                                <a class="timings__stage" :href="'#etap-' + (index+1)">
+                                <button type="button" @click="scrollTo('etap-' + (index+1))" class="timings__stage">
                                     <span class="timings__stage-value">{{stage}}</span>
                                     <span class="timings__stage-text">Этап</span>
-                                </a>
+                                </button>
                             </div>
                             <div class="timings__item-bot">
                                 <div class="timings__item-desc" v-if="index + 1 < stages.length">
@@ -94,11 +102,13 @@
                             <h2 class="period__title">{{period.title}}</h2>
                             <p class="period__date">{{period.textDate}}</p>
                             <p class="period__text text-component" v-html="period.content"></p>
-                            <a
-                                    :href="period.registerLink"
+                            <g-link
+                                    v-if="$page.wordPressActivity.acf.canRegister && period.registerLink"
+                                    :to="period.registerLink"
                                     :class="{'button--second': index % 2 === 0}"
                                     class="button period__button"
-                            >Регистрация</a>
+                            >Регистрация
+                            </g-link>
                         </div>
                     </div>
                     <div class="period__video-wrapper">
@@ -117,9 +127,10 @@
             </div>
         </article>
         <Grid/>
-        <News :style="cssVars" v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
+        <News id="news" :style="cssVars" v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
               :news-items="$page.wordPressActivity.acf.news"/>
         <section class="documents-section" :style="cssVars"
+                 id="documents"
                  v-if="$page.wordPressActivity.acf.documents && $page.wordPressActivity.acf.documents.length">
             <div class="container documents-section__container">
                 <h2 class="documents-section__title">Документы</h2>
@@ -134,6 +145,7 @@
         </section>
 
         <section class="container sponsors-section"
+                 id="sponsors"
                  v-if="$page.wordPressActivity.acf.sponsors && $page.wordPressActivity.acf.sponsors.length">
             <h2 class="sponsors-section__title">Спонсоры</h2>
             <div class="sponsors">
@@ -150,9 +162,9 @@
             <span class="sponsor-modal__title"><ArrowLeftIcon class="sponsor-modal__title-icon"
                                                               @click="activeSponsor = null"/> {{sponsor.title}}</span>
             <g-image class="sponsor-modal__logo" :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
-            <a class="sponsor-modal__link" :href="sponsor.acf.link">Сайт</a>
+            <g-link class="sponsor-modal__link" :to="sponsor.acf.link">Сайт</g-link>
         </div>
-        <Media :style="cssVars" v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
+        <Media id="media" :style="cssVars" v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
                :albums="$page.wordPressActivity.acf.alboms"/>
         <div class="container">
             <div>
@@ -168,6 +180,8 @@
     id
     title
     acf {
+    canRegister
+    registerLink
     documents {
     fileName
     file
@@ -242,7 +256,9 @@
     import News from "../components/News";
     import Grid from "../components/Grid";
     import ArrowLeftIcon from '../assets/svg/arrow-left-icon.svg';
+    import SweetScroll from 'sweet-scroll';
 
+    const scroller = new SweetScroll();
     export default {
         components: {
             Document,
@@ -281,6 +297,14 @@
             //     .then(() => {
             //         VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
             //     });
+        },
+        methods: {
+            scrollTo(elementId) {
+                if (process.isClient) {
+                    const el = document.getElementById(elementId);
+                    scroller.toElement(el);
+                }
+            }
         }
     };
 </script>
@@ -555,6 +579,8 @@
     }
 
     .activity-nav__link {
+        background: none;
+        border: none;
         font-size: 17px;
         letter-spacing: 0.6px;
         font-weight: 600;
@@ -627,6 +653,8 @@
     }
 
     .timings__stage {
+        background: none;
+        border: none;
         display: flex;
         align-items: baseline;
         text-decoration: none;
