@@ -14,8 +14,9 @@
             <ActivityTop v-if="!!$page.wordPressNews.acf.acitivty" :activity="$page.wordPressNews.acf.acitivty"/>
             <ActivityBanner v-if="!!$page.wordPressNews.acf.acitivty" :activity="$page.wordPressNews.acf.acitivty"/>
             <div class="section">
-                <div class="container">
+                <div class="container text-component">
                     <h1 class="text-xl margin">{{$page.wordPressNews.title}}</h1>
+                    <p class="text-md">{{$page.wordPressNews.acf.date}}</p>
                     <div v-html="$page.wordPressNews.content" class="text-component"></div>
                 </div>
             </div>
@@ -31,6 +32,7 @@
     title
     content
     acf {
+    date
     acitivty {
     path
     title

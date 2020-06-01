@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressNews.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressNews.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1590651862098" duration="4822000" />
       <workItem from="1590692866499" duration="3068000" />
       <workItem from="1590960495640" duration="1980000" />
-      <workItem from="1590994635326" duration="3582000" />
+      <workItem from="1590994635326" duration="3959000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -241,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590959096922</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="youyube">
+      <created>1591002363243</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1591002363244</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,17 +262,18 @@
     <MESSAGE value="save" />
     <MESSAGE value="new source" />
     <MESSAGE value="Мини доработки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Мини доработки" />
+    <MESSAGE value="youyube" />
+    <option name="LAST_COMMIT_MESSAGE" value="youyube" />
   </component>
   <component name="WindowStateProjectService">
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590698033967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590698033967" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1590959095048">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591002361918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590959095048" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591002361918" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1590692970243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
