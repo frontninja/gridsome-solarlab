@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/fb-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/inst-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/tw-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Contacts.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/elements/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/elements/_button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActivityBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityBanner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainActivity.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Activities.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Albums.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Albums.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/News.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/News.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,6 +98,8 @@
       <workItem from="1590564526311" duration="6964000" />
       <workItem from="1590651862098" duration="4822000" />
       <workItem from="1590692866499" duration="3068000" />
+      <workItem from="1590960495640" duration="1980000" />
+      <workItem from="1590994635326" duration="3582000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -246,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590693137779</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Мини доработки">
+      <created>1590959096922</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1590959096922</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,17 +255,18 @@
     <MESSAGE value="sidebar" />
     <MESSAGE value="save" />
     <MESSAGE value="new source" />
-    <option name="LAST_COMMIT_MESSAGE" value="new source" />
+    <MESSAGE value="Мини доработки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Мини доработки" />
   </component>
   <component name="WindowStateProjectService">
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590698033967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590698033967" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1590693136639">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1590959095048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590693136639" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590959095048" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1590692970243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -287,10 +283,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590698222990" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1590693141814">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1590959623790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590693141814" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590959623790" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588236441315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

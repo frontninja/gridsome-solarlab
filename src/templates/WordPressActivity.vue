@@ -14,7 +14,8 @@ import SweetScroll from "sweet-scroll";
                         </li>
                         <li class="activity-nav__li"
                             v-if="$page.wordPressActivity.acf.sponsors && $page.wordPressActivity.acf.sponsors.length">
-                            <button type="button" @click="scrollTo('sponsors')" class="activity-nav__link">Спонсоры</button>
+                            <button type="button" @click="scrollTo('sponsors')" class="activity-nav__link">Спонсоры
+                            </button>
                         </li>
                         <li class="activity-nav__li"
                             v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length">
@@ -22,7 +23,8 @@ import SweetScroll from "sweet-scroll";
                         </li>
                         <li class="activity-nav__li"
                             v-if="$page.wordPressActivity.acf.documents && $page.wordPressActivity.acf.documents.length">
-                            <button type="button" @click="scrollTo('documents')" class="activity-nav__link">Документы</button>
+                            <button type="button" @click="scrollTo('documents')" class="activity-nav__link">Документы
+                            </button>
                         </li>
                         <li class="activity-nav__li"
                             v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length">
@@ -111,15 +113,17 @@ import SweetScroll from "sweet-scroll";
                             </g-link>
                         </div>
                     </div>
-                    <div class="period__video-wrapper">
+                    <div class="period__video-wrapper" v-if="period.video || period.media">
                         <div class="video-wrapper">
                             <div class="video-wrapper__item video-wrapper__item--primary"></div>
                             <div class="video-wrapper__item video-wrapper__item--accent"></div>
                             <div class="video-wrapper__item video-wrapper__item--second"></div>
                         </div>
-                        <video class="period__video" controls>
+                        <video class="period__video" controls v-if="!period.isLinkedVideo && period.video">
                             <source :src="period.video" type="video/mp4"/>
                         </video>
+                        <div class="period__o-video" v-if="period.media && period.isLinkedVideo" v-html="period.media">
+                        </div>
                     </div>
                     <g-image :src="image.sourceUrl" :alt="image.altText" class="period__image"
                              v-for="image of period.images" :key="image.sourceUrl"></g-image>
@@ -127,7 +131,8 @@ import SweetScroll from "sweet-scroll";
             </div>
         </article>
         <Grid/>
-        <News id="news" :style="cssVars" v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
+        <News id="news" :style="cssVars"
+              v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
               :news-items="$page.wordPressActivity.acf.news"/>
         <section class="documents-section" :style="cssVars"
                  id="documents"
@@ -164,7 +169,8 @@ import SweetScroll from "sweet-scroll";
             <g-image class="sponsor-modal__logo" :src="sponsor.acf.logo" :alt="sponsor.title"></g-image>
             <g-link class="sponsor-modal__link" :to="sponsor.acf.link">Сайт</g-link>
         </div>
-        <Media id="media" :style="cssVars" v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
+        <Media id="media" :style="cssVars"
+               v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
                :albums="$page.wordPressActivity.acf.alboms"/>
         <div class="container">
             <div>
@@ -215,6 +221,8 @@ import SweetScroll from "sweet-scroll";
     content
     registerLink
     video
+    isLinkedVideo
+    media
     images {
     sourceUrl
     altText
@@ -511,6 +519,11 @@ import SweetScroll from "sweet-scroll";
     .period__video {
         height: 435px;
         width: 100%;
+    }
+
+    .period__o-video {
+        width: 100%;
+        height: calc(100% - 15px);
     }
 
     .period__content {
