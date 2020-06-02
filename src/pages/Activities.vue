@@ -42,7 +42,7 @@
                     {{node.title}}
                 </p>
                 <p class="box__desc">
-                    {{node.acf.period.from}} - {{node.acf.period.to}}
+                    {{node.acf.period.from | formatDate}} - {{node.acf.period.to | formatDate}}
                 </p>
             </g-link>
         </div>

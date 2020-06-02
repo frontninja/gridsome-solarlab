@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
+    <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="youyube">
+      <change afterPath="$PROJECT_DIR$/src/assets/svg/vk-icon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/WordPressNews.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressNews.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Activities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Activities.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +102,10 @@
       <workItem from="1590651862098" duration="4822000" />
       <workItem from="1590692866499" duration="3068000" />
       <workItem from="1590960495640" duration="1980000" />
-      <workItem from="1590994635326" duration="3959000" />
+      <workItem from="1590994635326" duration="10200000" />
+      <workItem from="1591081446997" duration="311000" />
+      <workItem from="1591085634371" duration="1360000" />
+      <workItem from="1591087034339" duration="1881000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -247,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591002363244</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="youyube">
+      <created>1591002903600</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1591002903600</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,10 +284,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590698033967" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591002361918">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591003005084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591002361918" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591003005084" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1590692970243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -290,25 +304,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590698222990" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1590959623790">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1591003011057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590959623790" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591003011057" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588236441315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588236441315" />
-    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1590959008398">
+    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1591029439212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590959008398" />
+    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591029439212" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1590566398863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590566398863" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590959006900">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591029996917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590959006900" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591029996917" />
   </component>
 </project>

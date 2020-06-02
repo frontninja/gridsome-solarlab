@@ -44,45 +44,25 @@ import SweetScroll from "sweet-scroll";
             <ActivityBanner :activity="$page.wordPressActivity"/>
 
             <div class="container">
-                <section class="activity-timing">
+                <section class="activity-timing" v-if="$page.wordPressActivity.acf.tajming && $page.wordPressActivity.acf.tajming.length">
                     <h2 class="title-2">Тайминг</h2>
                     <div class="timings">
-                        <div class="timings__item timings__item--start">
+                        <div class="timings__item"
+                             :class="$page.wordPressActivity.acf.tajming.length - 1 === index && 'timings__item--end' || 1 === index && 'timings__item--start'"
+                             v-for="(timing, index) of $page.wordPressActivity.acf.tajming">
                             <div class="timings__item-top">
-                                Старт
-                                <br/>квалификации
-                            </div>
-                            <div class="timings__item-bot">
-                                <div class="timings__item-desc">
-                                    Результаты
-                                    <br/>квалификации
-                                </div>
-                                <div class="timings__item-date">7.02</div>
-                            </div>
-                        </div>
-                        <div class="timings__item" v-for="(stage, index) of stages" :key="stage">
-                            <div class="timings__item-top">
-                                <button type="button" @click="scrollTo('etap-' + (index+1))" class="timings__stage">
-                                    <span class="timings__stage-value">{{stage}}</span>
+                                <span v-if="!timing.isEtap">{{timing.title}}</span>
+                                <button v-else type="button" @click="scrollTo('etap-' + (index+1))"
+                                        class="timings__stage">
+                                    <span class="timings__stage-value">{{timing.periodNumber}}</span>
                                     <span class="timings__stage-text">Этап</span>
                                 </button>
                             </div>
                             <div class="timings__item-bot">
-                                <div class="timings__item-desc" v-if="index + 1 < stages.length">
-                                    Промежуточный
-                                    <br/>результат
+                                <div class="timings__item-desc" v-if="timing.description">
+                                    {{timing.description}}
                                 </div>
-                                <div class="timings__item-desc" v-else>
-                                    Результат
-                                    <br/>финиша
-                                </div>
-                                <div class="timings__item-date">7.02</div>
-                            </div>
-                        </div>
-                        <div class="timings__item timings__item--end">
-                            <div class="timings__item-top">Награждение</div>
-                            <div class="timings__item-bot">
-                                <div class="timings__item-date">7.02</div>
+                                <div class="timings__item-date">{{timing.date | formatDate}}</div>
                             </div>
                         </div>
                     </div>
@@ -188,6 +168,13 @@ import SweetScroll from "sweet-scroll";
     acf {
     canRegister
     registerLink
+    tajming {
+    isEtap
+    periodNumber
+    title
+    description
+    date
+    }
     documents {
     fileName
     file
@@ -648,6 +635,7 @@ import SweetScroll from "sweet-scroll";
     .timings__item-desc {
         font-size: 10px;
         line-height: 1.2;
+        max-width: 80%;
 
         &:after {
             content: "";

@@ -11,10 +11,10 @@
             </div>
             <div class="footer__block">
                 <h3 class="text-xl footer__title">Контакты</h3>
-                <g-link class="footer__link" to="/contacts">Связаться с нами</g-link>
+                <g-link class="footer__link" to="https://taplink.cc/solarlab.sport">Связаться с нами</g-link>
                 <br>
                 <g-link class="footer__link" to="/activities">Карта мероприятий</g-link>
-                <g-link class="footer__button" to="/contacts">связаться</g-link>
+                <g-link class="footer__button" to="https://taplink.cc/solarlab.sport">связаться</g-link>
             </div>
         </div>
     </footer>

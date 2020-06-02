@@ -8,6 +8,17 @@
                 <g-link to="/" class="logo-link">
                     <Logo/>
                 </g-link>
+                <div class="sidebar__socials">
+                    <g-link class="social" to="https://www.facebook.com/SolarLabSPORT/">
+                        <facebook-icon class="social__icon"/>
+                    </g-link>
+                    <g-link class="social" to="https://vk.com/solarlab.sport">
+                        <VKIcon class="social__icon"/>
+                    </g-link>
+                    <g-link class="social" to="https://www.instagram.com/solarlab.sport/">
+                        <InstagramIcon class="social__icon"/>
+                    </g-link>
+                </div>
             </div>
             <div class="sidebar__expanded" :class="{ 'sidebar__expanded--visible': isExpandedVisible}">
                 <!--            <div class="sidebar__auth-links">-->
@@ -32,7 +43,7 @@
                             <g-link to="/about" class="nav__link">О нас</g-link>
                         </li>
                         <li class="nav__li" @click="hide()">
-                            <g-link to="/contacts" class="nav__link">Контакты</g-link>
+                            <g-link to="https://taplink.cc/solarlab.sport" class="nav__link">Контакты</g-link>
                         </li>
                         <!--                    <li class="nav__li" @click="hide()">-->
                         <!--                        <g-link to="/" class="nav__link">Аналитика</g-link>-->
@@ -50,6 +61,9 @@
 <script>
     import MenuIcon from '../assets/svg/menu-icon.svg';
     import Logo from '../assets/svg/logo.svg';
+    import FacebookIcon from '../assets/svg/fb-icon.svg';
+    import VKIcon from '../assets/svg/vk-icon.svg';
+    import InstagramIcon from '../assets/svg/inst-icon.svg';
 
     export default {
         name: "Sidebar",
@@ -72,12 +86,35 @@
         },
         components: {
             MenuIcon,
-            Logo
+            Logo,
+            FacebookIcon,
+            VKIcon,
+            InstagramIcon
         }
     }
 </script>
 
 <style scoped lang="scss">
+
+    .sidebar__socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+
+        & > * + * {
+            margin-top: 15px;
+        }
+    }
+
+    .social__icon {
+        transition: all .28s ease-in-out;
+
+        &:hover {
+            fill: var(--color-primary-lighter);
+        }
+    }
+
     .sidebar__wrapper {
         width: 100%;
         height: 100vh;
