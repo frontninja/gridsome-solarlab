@@ -44,7 +44,8 @@ import SweetScroll from "sweet-scroll";
             <ActivityBanner :activity="$page.wordPressActivity"/>
 
             <div class="container">
-                <section class="activity-timing" v-if="$page.wordPressActivity.acf.tajming && $page.wordPressActivity.acf.tajming.length">
+                <section class="activity-timing"
+                         v-if="$page.wordPressActivity.acf.tajming && $page.wordPressActivity.acf.tajming.length">
                     <h2 class="title-2">Тайминг</h2>
                     <div class="timings">
                         <div class="timings__item"
@@ -105,8 +106,11 @@ import SweetScroll from "sweet-scroll";
                         <div class="period__o-video" v-if="period.media && period.isLinkedVideo" v-html="period.media">
                         </div>
                     </div>
-                    <g-image :src="image.sourceUrl" :alt="image.altText" class="period__image"
-                             v-for="image of period.images" :key="image.sourceUrl"></g-image>
+                    <div class="period__image-wrapper" v-for="image of period.images">
+                        <div class="period__bg" :key="image.sourceUrl"
+                             :style="{backgroundImage: 'url(' + image.sourceUrl + ')'}"></div>
+                        <g-image :src="image.sourceUrl" :alt="image.altText" class="period__image"></g-image>
+                    </div>
                 </article>
             </div>
         </article>
@@ -537,9 +541,25 @@ import SweetScroll from "sweet-scroll";
     .period__button {
         margin-top: 20px;
     }
+    .period__image-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+    .period__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(5px);
+        height: 100%;
+        width: 100%;
+    }
 
     .period__image {
-        object-fit: cover;
+        position: relative;
+        z-index: 1;
+        object-fit: contain;
         width: 100%;
         height: 100%;
     }
