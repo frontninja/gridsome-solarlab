@@ -325,7 +325,7 @@ import SweetScroll from "sweet-scroll";
         visibility: hidden;
         background: #ffffff;
         position: fixed;
-        min-width: 320px;
+        width: 320px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
