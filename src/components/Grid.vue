@@ -260,10 +260,10 @@
             }
         },
         mounted() {
-            if (process.isClient) {
-                axios.get('http://api.chrono.zelbike.ru/v1/RaceStages/List?accessKey=RCwhtjBTpjVJ7tPGZKfPnQdtGzgo8pGQUisXxeXEvw')
-                    .then(response => (this.info = response));
-            }
+            // if (process.isClient) {
+            //     axios.get('http://api.chrono.zelbike.ru/v1/RaceStages/List?accessKey=RCwhtjBTpjVJ7tPGZKfPnQdtGzgo8pGQUisXxeXEvw')
+            //         .then(response => (this.info = response));
+            // }
         }
     }
 </script>
