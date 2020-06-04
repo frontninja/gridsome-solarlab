@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Grid.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,7 @@
       <workItem from="1591174614882" duration="964000" />
       <workItem from="1591177885448" duration="256000" />
       <workItem from="1591180105415" duration="25000" />
-      <workItem from="1591255513352" duration="1125000" />
+      <workItem from="1591255513352" duration="1577000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -297,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591256777610</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix click">
+      <created>1591257135809</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1591257135809</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,17 +323,18 @@
     <MESSAGE value="socials and timing" />
     <MESSAGE value="img fix" />
     <MESSAGE value="period number" />
-    <option name="LAST_COMMIT_MESSAGE" value="period number" />
+    <MESSAGE value="fix click" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix click" />
   </component>
   <component name="WindowStateProjectService">
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590698033967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590698033967" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591256776710">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591257134722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591256776710" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591257134722" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1590692970243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -343,10 +351,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590698222990" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1591256795207">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1591257140230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591256795207" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591257140230" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588236441315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

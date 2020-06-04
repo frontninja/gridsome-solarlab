@@ -440,9 +440,8 @@ import SweetScroll from "sweet-scroll";
         }
 
         & > img {
-            max-width: 100%;
+            width: 100%;
             object-fit: contain;
-            max-height: 100%;
         }
     }
 
