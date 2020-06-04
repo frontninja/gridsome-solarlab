@@ -53,7 +53,7 @@ import SweetScroll from "sweet-scroll";
                              v-for="(timing, index) of $page.wordPressActivity.acf.tajming">
                             <div class="timings__item-top">
                                 <span v-if="!timing.isEtap">{{timing.title}}</span>
-                                <button v-else type="button" @click="scrollTo('etap-' + (index+1))"
+                                <button v-else type="button" @click="scrollTo('etap-' + timing.periodNumber)"
                                         class="timings__stage">
                                     <span class="timings__stage-value">{{timing.periodNumber}}</span>
                                     <span class="timings__stage-text">Этап</span>
