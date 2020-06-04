@@ -63,6 +63,15 @@
         position: relative;
         color: var(--color-white);
         background: var(--color-primary);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background: var(--color-black);
+
+            .main-activity__bg {
+                filter: grayscale(0);
+                opacity: .6;
+            }
+        }
     }
 
     .main-activity__title {
@@ -83,6 +92,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        transition: all .3s ease-in-out;
     }
 
     .main-activity__description {

@@ -91,6 +91,7 @@
     }
 
     .scroll-to-top {
+        z-index: 100;
         position: fixed;
         bottom: 50px;
         right: 50px;
