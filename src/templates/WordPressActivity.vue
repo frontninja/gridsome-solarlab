@@ -438,6 +438,12 @@ import SweetScroll from "sweet-scroll";
         &:hover {
             filter: grayscale(0);
         }
+
+        & > img {
+            max-width: 100%;
+            object-fit: contain;
+            max-height: 100%;
+        }
     }
 
     .documents-section {
@@ -541,10 +547,12 @@ import SweetScroll from "sweet-scroll";
     .period__button {
         margin-top: 20px;
     }
+
     .period__image-wrapper {
         position: relative;
         overflow: hidden;
     }
+
     .period__bg {
         position: absolute;
         top: 0;
