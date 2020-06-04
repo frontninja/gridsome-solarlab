@@ -64,6 +64,7 @@
         color: var(--color-white);
         background: var(--color-primary);
         transition: all .3s ease-in-out;
+
         &:hover {
             background: var(--color-black);
 

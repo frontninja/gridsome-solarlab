@@ -9,7 +9,6 @@ module.exports = {
         use: '@gridsome/source-wordpress',
         options: {
             baseUrl: 'https://admin.solarlab.cc/',
-            // baseUrl: 'http://localhost/solarlab.cc',
             apiBase: 'wp-json',
             typeName: 'WordPress',
             perPage: 100,
@@ -22,7 +21,7 @@ module.exports = {
     ],
     templates: {
         WordPressActivity: '/acitvities/:slug',
-        WordPressNews:'/news/:slug',
-        WordPressAlbom:'/albom/:slug'
+        WordPressNews: '/news/:slug',
+        WordPressAlbom: '/albom/:slug'
     }
 };
