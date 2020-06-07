@@ -114,7 +114,7 @@ import SweetScroll from "sweet-scroll";
                 </article>
             </div>
         </article>
-        <Grid/>
+<!--        <Grid/>-->
         <News id="news" :style="cssVars"
               v-if="$page.wordPressActivity.acf.news && $page.wordPressActivity.acf.news.length"
               :news-items="$page.wordPressActivity.acf.news"/>
@@ -156,11 +156,11 @@ import SweetScroll from "sweet-scroll";
         <Media id="media" :style="cssVars"
                v-if="$page.wordPressActivity.acf.alboms && $page.wordPressActivity.acf.alboms.length"
                :albums="$page.wordPressActivity.acf.alboms"/>
-        <div class="container">
-            <div>
-                <div id="vk_comments"></div>
-            </div>
-        </div>
+<!--        <div class="container">-->
+<!--            <div>-->
+<!--                <div id="vk_comments"></div>-->
+<!--            </div>-->
+<!--        </div>-->
     </Layout>
 </template>
 <page-query>
@@ -325,7 +325,7 @@ import SweetScroll from "sweet-scroll";
         visibility: hidden;
         background: #ffffff;
         position: fixed;
-        width: 320px;
+        width: 500px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -338,6 +338,11 @@ import SweetScroll from "sweet-scroll";
         &--active {
             opacity: 1;
             visibility: visible;
+        }
+
+        @media (max-width: 768px) {
+            width: 100vw;
+            padding: 50px;
         }
     }
 
@@ -494,6 +499,8 @@ import SweetScroll from "sweet-scroll";
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 450px;
         color: var(--color-white);
+
+
     }
 
     .period__main {
@@ -520,10 +527,15 @@ import SweetScroll from "sweet-scroll";
     .period__o-video {
         width: 100%;
         height: calc(100% - 15px);
+        min-height: 320px;
     }
 
     .period__content {
         width: 50%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .period__title {
@@ -531,6 +543,10 @@ import SweetScroll from "sweet-scroll";
         font-weight: 800;
         font-size: 24px;
         line-height: 1.5;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 
     .period__date {
@@ -740,7 +756,7 @@ import SweetScroll from "sweet-scroll";
         }
 
         .documents {
-            grid-template-columns: repeat(3, 126px);
+            grid-template-columns: repeat(3, 1fr);
         }
 
         .timings__item {
@@ -764,16 +780,34 @@ import SweetScroll from "sweet-scroll";
             color: var(--color-white);
         }
 
-        .period > * {
-            min-height: 300px;
-        }
-
         .period__main {
             padding: 25px;
+
+            @media (max-width: 768px) {
+                padding: 40px 25px;
+            }
         }
 
         .sponsors {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        .documents-section {
+            background-image: none;
+        }
+
+        .documents {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 520px) {
+        /*.sponsors {*/
+        /*    grid-template-columns: repeat(1, 1fr);*/
+        /*}*/
+
+        .documents {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 </style>

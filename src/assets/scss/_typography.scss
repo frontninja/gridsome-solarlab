@@ -39,6 +39,12 @@ $breakpoints: (
   line-height: var(--heading-line-height);
 }
 
+@media (max-width: 768px) {
+  .text-xl {
+    font-size: 18px;
+  }
+}
+
 .margin {
   margin-bottom: 2em;
 }

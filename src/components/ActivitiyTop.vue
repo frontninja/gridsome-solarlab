@@ -79,6 +79,11 @@
         font-weight: 800;
         text-transform: uppercase;
         margin-bottom: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+            line-height: 1.5;
+        }
     }
 
     .activity-main__date {

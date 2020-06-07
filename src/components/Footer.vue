@@ -137,5 +137,9 @@
         .footer__links {
             grid-template-columns: repeat(1, 1fr);
         }
+
+        .footer__title {
+            margin-bottom: 2em;
+        }
     }
 </style>

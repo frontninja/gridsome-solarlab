@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="fix modal">
+    <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivitiyTop.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActivityBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityBanner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,7 @@
       <workItem from="1591177885448" duration="256000" />
       <workItem from="1591180105415" duration="25000" />
       <workItem from="1591255513352" duration="4770000" />
-      <workItem from="1591538104704" duration="6073000" />
+      <workItem from="1591538104704" duration="9344000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -334,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591261673087</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="adaptiv">
+      <created>1591553025581</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1591553025581</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,17 +368,18 @@
     <MESSAGE value="f" />
     <MESSAGE value="build fix" />
     <MESSAGE value="fix modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix modal" />
+    <MESSAGE value="adaptiv" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaptiv" />
   </component>
   <component name="WindowStateProjectService">
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590698033967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590698033967" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591541219194">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591553024501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591541219194" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591553024501" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1591541217917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -385,25 +396,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590698222990" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1591261677698">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1591553028880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591261677698" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591553028880" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588236441315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588236441315" />
-    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1591550572568">
+    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1591557131081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591550572568" />
+    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591557131081" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1591541729953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591541729953" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591550980192">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591554353913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591550980192" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591554353913" />
   </component>
 </project>
