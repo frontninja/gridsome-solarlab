@@ -94,16 +94,14 @@
     }
 
     .activity-timer {
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 30px;
     }
 
     .activity-timer__item {
         display: flex;
         align-items: baseline;
-
-        & + & {
-            margin-left: 30px;
-        }
     }
 
     .activity-timer__value {
@@ -126,6 +124,10 @@
     }
 
     @media (max-width: 767px) {
+
+        .activity-timer {
+            grid-auto-flow: row;
+        }
         .activity-main {
             flex-direction: column;
             align-items: stretch;
