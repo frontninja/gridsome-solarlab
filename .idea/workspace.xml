@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c27d313e-f2bf-4fb7-a814-683050a606ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActivityBanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityBanner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainActivity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Media.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Media.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/WordPressActivity.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,10 @@
       <workItem from="1591180105415" duration="25000" />
       <workItem from="1591255513352" duration="4770000" />
       <workItem from="1591538104704" duration="9969000" />
-      <workItem from="1591601746114" duration="1443000" />
+      <workItem from="1591601746114" duration="2187000" />
+      <workItem from="1591625761350" duration="1549000" />
+      <workItem from="1591655574507" duration="408000" />
+      <workItem from="1591832925439" duration="1397000" />
     </task>
     <task id="LOCAL-00001" summary="add grids">
       <created>1587417049669</created>
@@ -348,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591557263705</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="adaptive fix">
+      <created>1591620056149</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1591620056149</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,10 +394,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590698033967" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591557262261">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1591620055202">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591557262261" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591620055202" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1591541217917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -401,18 +414,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590698222990" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1591557267578">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1591620062781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591557267578" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591620062781" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588236441315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588236441315" />
-    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1591619991274">
+    <state x="657" y="252" width="606" height="536" key="find.popup" timestamp="1591839429876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591619991274" />
+    <state x="657" y="252" width="606" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591839429876" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1591541729953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

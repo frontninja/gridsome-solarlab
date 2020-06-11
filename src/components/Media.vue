@@ -30,6 +30,12 @@
         grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: 220px;
         color: var(--color-white);
+
+        @media (max-width: 786px) {
+            &>* {
+                grid-column: 1/3;
+            }
+        }
     }
 
     .media-section__main {

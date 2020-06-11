@@ -158,6 +158,10 @@
             border-right: 146px solid transparent;
             top: 100%;
         }
+
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
     }
 
     .main-activity__info-range {
@@ -175,6 +179,7 @@
 
         .main-activity__content {
             order: 2;
+            padding-right: 0;
         }
 
         .main-activity__info {

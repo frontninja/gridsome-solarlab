@@ -362,6 +362,8 @@ import SweetScroll from "sweet-scroll";
         transition: all .28s ease-in-out;
         cursor: pointer;
 
+        flex-shrink: 0;
+
         &:hover {
             fill: var(--color-primary);
         }
@@ -369,6 +371,8 @@ import SweetScroll from "sweet-scroll";
 
     .sponsor-modal__logo {
         margin-bottom: 50px;
+        max-width: 250px;
+        max-height: 250px;
     }
 
     .sponsor-modal__link {
