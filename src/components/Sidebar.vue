@@ -142,10 +142,12 @@
         flex-direction: column;
         align-items: center;
         padding: 96px 0;
+        z-index: 2;
     }
 
     .sidebar__expanded {
         max-width: 0;
+        z-index: 2;
         overflow: hidden;
         padding: 78px 0;
         transition: all .5s cubic-bezier(.8, 0, .33, 1);
