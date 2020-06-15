@@ -24,7 +24,7 @@
 
 <page-query>
     query($page: Int) {
-    allWordPressAlbom(perPage: 8, page: $page) @paginate {
+    allWordPressAlbom(perPage: 8, page: $page, sortBy: "date", order: ASC) @paginate {
     pageInfo {
     totalPages
     currentPage

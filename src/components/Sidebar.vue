@@ -28,7 +28,7 @@
                 <nav class="sidebar__nav nav">
                     <ul class="nav__ul">
                         <li class="nav__li" @click="hide()">
-                            <g-link to="/activities" class="nav__link">Мероприятия</g-link>
+                            <g-link to="/events" class="nav__link">Мероприятия</g-link>
                         </li>
                         <li class="nav__li" @click="hide()">
                             <g-link to="/news" class="nav__link">Новости</g-link>
@@ -37,7 +37,7 @@
                         <!--                        <g-link to="/" class="nav__link">Участники</g-link>-->
                         <!--                    </li>-->
                         <li class="nav__li" @click="hide()">
-                            <g-link to="/albums" class="nav__link">Медиа</g-link>
+                            <g-link to="/media" class="nav__link">Медиа</g-link>
                         </li>
                         <li class="nav__li" @click="hide()">
                             <g-link to="/about" class="nav__link">О нас</g-link>

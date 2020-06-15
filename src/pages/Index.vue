@@ -30,7 +30,7 @@
 <!--                    <input type="text" class="search-box__input" placeholder="Поиск...">-->
 <!--                    <div class="search-box__buttons">-->
 <!--                        <g-link class="search-box__button" :to="'activities'">Поиск</g-link>-->
-                        <g-link class="search-box__button" :to="'activities'">все мороприятия</g-link>
+                        <g-link class="search-box__button" :to="'events'">все мороприятия</g-link>
 <!--                    </div>-->
                 </div>
             </div>

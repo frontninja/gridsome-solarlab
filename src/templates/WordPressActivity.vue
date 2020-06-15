@@ -35,7 +35,7 @@ import SweetScroll from "sweet-scroll";
                 <div class="breadcrumbs activity-page__breadcrumbs">
                     <g-link to="/">главная</g-link>
                     /
-                    <g-link to="/activities">мероприятия</g-link>
+                    <g-link to="/events">мероприятия</g-link>
                     /
                     {{$page.wordPressActivity.title}}
                 </div>

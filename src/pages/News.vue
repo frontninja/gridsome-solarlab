@@ -21,7 +21,7 @@
 
 <page-query>
     query($page: Int) {
-    allWordPressNews(perPage: 8, page: $page) @paginate {
+    allWordPressNews(perPage: 8, page: $page, sortBy: "date", order: ASC) @paginate {
     pageInfo {
     totalPages
     currentPage

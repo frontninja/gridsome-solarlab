@@ -5,7 +5,7 @@
                 <div class="breadcrumbs activity-page__breadcrumbs">
                     <g-link to="/">главная</g-link>
                     /
-                    <g-link to="/activities">мероприятия</g-link>
+                    <g-link to="/events">мероприятия</g-link>
                     /
                     <g-link :to="$page.wordPressAlbom.acf.activity.path">{{$page.wordPressAlbom.acf.activity.title}}
                     </g-link>

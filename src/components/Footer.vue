@@ -13,7 +13,7 @@
                 <h3 class="text-xl footer__title">Контакты</h3>
                 <g-link class="footer__link" to="https://taplink.cc/solarlab.sport">Связаться с нами</g-link>
                 <br>
-                <g-link class="footer__link" to="/activities">Карта мероприятий</g-link>
+                <g-link class="footer__link" to="/events">Карта мероприятий</g-link>
                 <g-link class="footer__button" to="https://taplink.cc/solarlab.sport">связаться</g-link>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 links: [
                     {
                         path: '/',
-                        title: 'главная'
+                        title: 'Главная'
                     },
                     {
                         path: 'activities',
@@ -86,7 +86,6 @@
     .footer__link {
         color: var(--color-gray-lighten);
         text-decoration: none;
-        text-transform: capitalize;
         padding-right: 20px;
         font-size: 18px;
         line-height: 1.5;
