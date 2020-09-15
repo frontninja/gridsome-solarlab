@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="margin"></div>
-            <Media :albums="$page.wordPressAlbom.acf.activity.acf.alboms"/>
+            <Media :albums="$page.wordPressAlbom.acf.activity.acf.alboms" />
         </article>
     </Layout>
 </template>

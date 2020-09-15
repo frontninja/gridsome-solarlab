@@ -14,7 +14,17 @@ export default function (Vue, {router, head, isClient}) {
     Vue.use(VueFilterPluralize);
     Vue.filter('formatDate', (value) => {
         if (value) {
-            return moment(String(value)).format('MM.DD.YYYY');
+            return moment(String(value)).format('DD.MM.YYYY');
+        }
+    });
+
+    Vue.filter('formatDateWithTime', (value) => {
+        if (value) {
+            const momentDate = moment(String(value));
+            if (momentDate.hours() || momentDate.minutes()) {
+                return moment(String(value)).format('DD.MM.YYYY HH:mm');
+            }
+            return moment(String(value)).format('DD.MM.YYYY');
         }
     });
     if (isClient) {

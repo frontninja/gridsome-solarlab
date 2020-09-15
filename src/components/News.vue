@@ -4,7 +4,7 @@
             <h2 class="news__title">Новости</h2>
         </div>
         <g-link class="news__item"
-                :to="item.path"
+                :to="item.acf.link || item.path"
                 v-for="{item} of newsItems"
                 :key="item.id">
             <span class="news__item-bg" :style="{backgroundImage: 'url(' + item.acf.image + ')'}"></span>

@@ -4,7 +4,7 @@
             <div class="main-box">
                 <h1 class="main-box__title">Новости</h1>
             </div>
-            <g-link :to="node.path" class="box"
+            <g-link :to="node.acf.link || node.path" class="box"
                     v-for="({node}, index) of $page.allWordPressNews.edges" :key="index">
                 <div class="box__bg"
                      :style="{backgroundImage: 'url(' + node.acf.image + ')'}"></div>
@@ -32,6 +32,7 @@
     path
     acf {
     image
+    link
     }
     }
     }

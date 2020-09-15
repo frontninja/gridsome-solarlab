@@ -30,7 +30,7 @@
 <!--                    <input type="text" class="search-box__input" placeholder="Поиск...">-->
 <!--                    <div class="search-box__buttons">-->
 <!--                        <g-link class="search-box__button" :to="'activities'">Поиск</g-link>-->
-                        <g-link class="search-box__button" :to="'events'">все мороприятия</g-link>
+                        <g-link class="search-box__button" :to="'events'">все мероприятия</g-link>
 <!--                    </div>-->
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 <div class="main-box">
                     <h2 class="main-box__title">новости</h2>
                 </div>
-                <g-link :to="newsItem.path" class="box" :class="{'box--accent': accent}"
+                <g-link :to="newsItem.acf.link || newsItem.path" class="box" :class="{'box--accent': accent}"
                         v-for="({newsItem, accent}, index) of $page.wordPressPage.acf.news"
                         :key="index">
                     <div class="box__bg"
@@ -150,6 +150,7 @@
     path
     acf {
     image
+    link
     }
     }
     accent

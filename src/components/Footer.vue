@@ -47,7 +47,7 @@
                         title: 'О нас'
                     },
                     {
-                        path: 'contacts',
+                        path: 'https://taplink.cc/solarlab.sport',
                         title: 'Контакты'
                     },
                 ]

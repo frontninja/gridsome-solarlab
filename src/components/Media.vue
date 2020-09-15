@@ -3,15 +3,15 @@
         <div class="media-section__main">
             <h2 class="media-section__main-title">Медиа</h2>
         </div>
-        <g-link class="media-section__item" :to="albom.path" :class="{'media-section__item--accent': accent}"
-                v-for="{albom, accent} of albums" v-if="albom" :key="albom.title">
+        <g-link class="media-section__item" :to="album.path" :class="{'media-section__item--accent': accent}"
+                v-for="{albom : album, accent} of albums" v-if="album && album !== activeMedia" :key="album.title">
             <span
                     class="media-section__item-bg"
-                    :style="{backgroundImage: 'url(' + albom.acf.media[0] + ')'}"
+                    :style="{backgroundImage: 'url(' + album.acf.media[0] + ')'}"
             ></span>
             <span class="media-section__item-content">
-              {{albom.title}} <br>
-              {{albom.acf.date}}
+              {{album.title}} <br>
+              {{album.acf.date}}
             </span>
         </g-link>
     </section>
@@ -20,7 +20,7 @@
 <script>
     export default {
         name: "Media",
-        props: ["albums"]
+        props: ["albums", "activeMedia"]
     }
 </script>
 
