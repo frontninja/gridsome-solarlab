@@ -18,7 +18,17 @@
                     <h1 class="text-xl margin">{{$page.wordPressAlbom.title}} <br> {{$page.wordPressAlbom.acf.date}}
                     </h1>
                     <silent-box class="silentbox-gallery"
-                                :gallery="$page.wordPressAlbom.acf.media | gallery"></silent-box>
+                                :gallery="currentMedia | gallery"></silent-box>
+                                  <paginate
+                        :page-count="totalPages"
+                        :page-range="5"
+                        :margin-pages="1"
+                        :click-handler="clickCallback"
+                        :prev-text="'‹'"
+                        :next-text="'›'"
+                        :container-class="'pagination'"
+                        :page-class="'page-item'">
+                    </paginate>
                 </div>
             </div>
             <div class="margin"></div>
@@ -67,6 +77,31 @@
     import ActivityBanner from "../components/ActivityBanner";
     import Media from "../components/Media";
     export default {
+        data() {
+            return {
+                medias: [],
+                currentMedia: [],
+                totalPages: 0,
+            };
+        },
+        mounted() {
+            this.medias = [];
+            this.$page.wordPressAlbom.acf.activity.acf.alboms.forEach(item => this.medias = [...this.medias, ...item.albom.acf.media]);
+            this.totalPages = this.medias.length % 12;
+            this.setCurrentMedia(1, this.medias);
+        },
+          methods: {
+                clickCallback: function(pageNum) {
+                    this.setCurrentMedia(pageNum, this.medias);
+                },
+                setCurrentMedia: function(currentPage, medias) {
+                    const min = (currentPage - 1) !== 0 ? (currentPage - 1) * 12 : 0;
+                    const max = currentPage * 12
+                    this.currentMedia = medias.filter((media, index) => {
+                        return  index >= min && index < max;
+                    });
+                }
+            },
         components: {
             ActivityTop,
             ActivityBanner,
