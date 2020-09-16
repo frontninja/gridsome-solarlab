@@ -155,6 +155,7 @@
         align-items: center;
         background: var(--color-primary);
         grid-gap: 80px;
+        grid-auto-columns: min-content;
     }
 
     .activity-banner__logo {

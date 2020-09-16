@@ -19,7 +19,7 @@
                     </h1>
                     <silent-box class="silentbox-gallery"
                                 :gallery="currentMedia | gallery"></silent-box>
-                                  <paginate
+                                  <paginator
                         :page-count="totalPages"
                         :page-range="5"
                         :margin-pages="1"
@@ -28,7 +28,7 @@
                         :next-text="'›'"
                         :container-class="'pagination'"
                         :page-class="'page-item'">
-                    </paginate>
+                    </paginator>
                 </div>
             </div>
             <div class="margin"></div>
@@ -76,6 +76,7 @@
     import ActivityTop from "../components/ActivitiyTop";
     import ActivityBanner from "../components/ActivityBanner";
     import Media from "../components/Media";
+    import Paginator from "../components/Paginator";
     export default {
         data() {
             return {
@@ -85,14 +86,18 @@
             };
         },
         mounted() {
-            this.medias = [];
-            this.$page.wordPressAlbom.acf.activity.acf.alboms.forEach(item => this.medias = [...this.medias, ...item.albom.acf.media]);
-            this.totalPages = this.medias.length % 12;
-            this.setCurrentMedia(1, this.medias);
+            if (process.isClient) {
+                this.medias = [];
+                this.$page.wordPressAlbom.acf.activity.acf.alboms.forEach(item => this.medias = [...this.medias, ...item.albom.acf.media]);
+                this.totalPages = this.medias.length % 12;
+                this.setCurrentMedia(1, this.medias);
+            }
         },
           methods: {
                 clickCallback: function(pageNum) {
-                    this.setCurrentMedia(pageNum, this.medias);
+                    if (process.isClient) {
+                        this.setCurrentMedia(pageNum, this.medias);
+                    }
                 },
                 setCurrentMedia: function(currentPage, medias) {
                     const min = (currentPage - 1) !== 0 ? (currentPage - 1) * 12 : 0;
@@ -105,7 +110,8 @@
         components: {
             ActivityTop,
             ActivityBanner,
-            Media
+            Media,
+            Paginator
         },
         filters: {
             gallery: (imagesSrc) => {

@@ -6,13 +6,11 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueFilterPluralize from 'vue-filter-pluralize'
 import VueSilentbox from 'vue-silentbox'
 import * as moment from "moment";
-import Paginate from 'vuejs-paginate'
 
 export default function (Vue, {router, head, isClient}) {
     // Set default layout as a global component
     head.htmlAttrs = {lang: 'ru'};
     Vue.component('Layout', DefaultLayout);
-    Vue.component('paginate', Paginate)
     Vue.use(VueFilterPluralize);
     Vue.filter('formatDate', (value) => {
         if (value) {

@@ -49,7 +49,7 @@ import SweetScroll from "sweet-scroll";
           <h2 class="title-2">Тайминг</h2>
           <div class="timings">
             <div class="timings__item"
-                 :class="$page.wordPressActivity.acf.tajming.length - 1 === index && 'timings__item--end' || 1 === index && 'timings__item--start'"
+                 :class="$page.wordPressActivity.acf.tajming.length - 1 === index && 'timings__item--end' || 0 === index && 'timings__item--start'"
                  v-for="(timing, index) of $page.wordPressActivity.acf.tajming">
               <div class="timings__item-top">
                 <span v-if="!timing.isEtap">{{ timing.title }}</span>
@@ -72,6 +72,7 @@ import SweetScroll from "sweet-scroll";
       <div class="periods">
         <article
             class="period"
+            :class="!(period.video || period.media || period.images.length) ? 'period--single' : ''"
             v-for="(period, index) of this.$page.wordPressActivity.acf.periods"
             :key="index"
             :id="'etap-' + (index+1)"
@@ -505,7 +506,9 @@ export default {
   grid-auto-rows: min-content;
   color: var(--color-white);
 
-
+  &--single {
+     grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .period__main {
@@ -667,10 +670,22 @@ export default {
   border-bottom: 1px solid var(--color-black);
   position: relative;
   margin-bottom: 50px;
+
+  &:not(:first-child) {
+    padding-left: 30px;
+  }
+}
+
+.timings__item--start, .timings__item--end {
+  .timings__item-top {
+  font-size: 18px;
+  line-height: 22px;
+  }
 }
 
 .timings__item-top {
   margin-bottom: 17px;
+  font-size: 13px;
 }
 
 .timings__item-bot {
